@@ -1,0 +1,15 @@
+CEO PHOTO INSTRUCTIONS
+======================
+
+1. Name your photo file exactly:  ceo-photo.jpg
+2. Place it in this folder:        assets/ceo-photo.jpg
+3. That's it — the website will show it automatically.
+
+Recommended specs:
+- Format: JPG or WebP
+- Size: 600x700 px minimum (portrait orientation)
+- Subject: centered, upper body / head shot
+- Background: dark or neutral works best with the site design
+
+The photo slot is in the About section. If the file is missing,
+the "AFP" gold initials show as a fallback — nothing breaks.

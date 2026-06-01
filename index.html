@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="RusAndes Blockchain — International Services Group bridging Latin America with Russia, Turkey, and global markets through education, finance, and premium accommodation." />
+  <meta name="keywords" content="RusAndes, blockchain, international services, Colombia, Russia, Turkey, language programs, global markets, cryptocurrency, accommodation Bogotá" />
+  <meta property="og:title" content="RusAndes Blockchain | International Services Group" />
+  <meta property="og:description" content="Bridging Latin America with Russia, Turkey, and global markets through education, finance, and accommodation." />
+  <meta property="og:type" content="website" />
+  <title>RusAndes Blockchain | International Services Group</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Cpolygon points='22,2 40,12 40,32 22,42 4,32 4,12' fill='%2306091A' stroke='%23C9A84C' stroke-width='2'/%3E%3Ccircle cx='22' cy='22' r='5' fill='%23C9A84C'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <svg class="logo-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <polygon points="22,4 38,13 38,31 22,40 6,31 6,13" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+          <polygon points="22,10 32,16 32,28 22,34 12,28 12,16" fill="none" stroke="#C9A84C" stroke-width="1" opacity="0.5"/>
+          <circle cx="22" cy="22" r="4" fill="#C9A84C"/>
+          <line x1="22" y1="4" x2="22" y2="10" stroke="#C9A84C" stroke-width="1.5"/>
+          <line x1="38" y1="13" x2="32" y2="16" stroke="#C9A84C" stroke-width="1.5"/>
+          <line x1="38" y1="31" x2="32" y2="28" stroke="#C9A84C" stroke-width="1.5"/>
+          <line x1="22" y1="40" x2="22" y2="34" stroke="#C9A84C" stroke-width="1.5"/>
+          <line x1="6" y1="31" x2="12" y2="28" stroke="#C9A84C" stroke-width="1.5"/>
+          <line x1="6" y1="13" x2="12" y2="16" stroke="#C9A84C" stroke-width="1.5"/>
+        </svg>
+        <div class="logo-text-group">
+          <span class="logo-name">RusAndes</span>
+          <span class="logo-sub">BLOCKCHAIN</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#divisions" class="nav-link">Services</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#values" class="nav-link">Values</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="nav-cta">Get in Touch</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section id="home" class="hero">
+    <canvas id="particleCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge hero-anim hero-anim--1">
+        <span class="badge-dot"></span>
+        Bogotá D.C., Colombia &nbsp;·&nbsp; Est. 2024
+      </div>
+      <h1 class="hero-title hero-anim hero-anim--2">
+        <span class="hero-title-main">RusAndes</span>
+        <span class="hero-title-accent">Blockchain</span>
+      </h1>
+      <p class="hero-tagline hero-anim hero-anim--3">International Services Group</p>
+      <p class="hero-description hero-anim hero-anim--4">
+        Bridging Latin America with Russia, Turkey, and global markets —<br class="hero-br" />
+        through education, finance, and premium accommodation.
+      </p>
+      <div class="hero-divisions hero-anim hero-anim--5">
+        <span class="division-tag">
+          <span class="tag-icon">📚</span>International Programs
+        </span>
+        <span class="division-tag">
+          <span class="tag-icon">📈</span>Global Markets
+        </span>
+        <span class="division-tag">
+          <span class="tag-icon">🏢</span>Accommodation Services
+        </span>
+      </div>
+      <div class="hero-ctas hero-anim hero-anim--6">
+        <a href="#divisions" class="btn btn-primary">Explore Services</a>
+        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+
+    <a href="#divisions" class="hero-scroll-indicator" aria-label="Scroll down">
+      <div class="scroll-dot"></div>
+    </a>
+  </section>
+
+  <!-- ============================================================
+       STATS BAR
+  ============================================================ -->
+  <div class="stats-bar">
+    <div class="stats-container">
+      <div class="stat-item">
+        <span class="stat-number">3</span>
+        <span class="stat-label">Core Divisions</span>
+      </div>
+      <div class="stat-sep" aria-hidden="true"></div>
+      <div class="stat-item">
+        <span class="stat-number">4+</span>
+        <span class="stat-label">Countries Served</span>
+      </div>
+      <div class="stat-sep" aria-hidden="true"></div>
+      <div class="stat-item">
+        <span class="stat-number">3</span>
+        <span class="stat-label">Languages Offered</span>
+      </div>
+      <div class="stat-sep" aria-hidden="true"></div>
+      <div class="stat-item">
+        <span class="stat-number">🌐</span>
+        <span class="stat-label">Global Operations</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       DIVISIONS
+  ============================================================ -->
+  <section id="divisions" class="divisions">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">Three Integrated Divisions</h2>
+        <p class="section-desc">Each division operates independently yet feeds a unified platform — one relationship, three services, a model no single-service competitor can replicate.</p>
+      </div>
+
+      <div class="divisions-grid">
+
+        <!-- Card 1 -->
+        <div class="division-card" data-reveal data-delay="0">
+          <div class="card-top">
+            <span class="card-number">01</span>
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5"/><path d="M24 10 Q32 16 32 24 Q32 32 24 38 Q16 32 16 24 Q16 16 24 10Z" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="10" y1="20" x2="38" y2="20" stroke="currentColor" stroke-width="1.5"/><line x1="10" y1="28" x2="38" y2="28" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+          </div>
+          <h3 class="card-title">International Programs</h3>
+          <p class="card-subtitle">Education &amp; Language</p>
+          <p class="card-desc">Unlocking academic and language opportunities across borders. We connect students and professionals with English, Russian, and Turkish programs — a corridor most Latin American providers completely ignore.</p>
+          <ul class="card-list">
+            <li>Language courses: English · Russian · Turkish</li>
+            <li>University pathway &amp; enrollment</li>
+            <li>TORFL &amp; YDS certification prep</li>
+            <li>Corporate language training</li>
+            <li>International academic mobility</li>
+          </ul>
+          <a href="#contact" class="card-link">Inquire about programs <span aria-hidden="true">→</span></a>
+        </div>
+
+        <!-- Card 2 (Featured) -->
+        <div class="division-card division-card--featured" data-reveal data-delay="100">
+          <div class="card-featured-badge">Core Division</div>
+          <div class="card-top">
+            <span class="card-number">02</span>
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><polyline points="6,36 16,22 24,28 36,12 42,18" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><polyline points="36,12 42,12 42,18" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="6" y="38" width="36" height="2" fill="currentColor" opacity="0.3"/><circle cx="16" cy="22" r="2" fill="currentColor"/><circle cx="24" cy="28" r="2" fill="currentColor"/><circle cx="36" cy="12" r="2" fill="currentColor"/></svg>
+            </div>
+          </div>
+          <h3 class="card-title">Global Markets</h3>
+          <p class="card-subtitle">Finance &amp; Digital Assets</p>
+          <p class="card-desc">Navigate international financial landscapes with confidence. Advisory services in foreign exchange, cryptocurrency, and digital assets — with deep expertise in Latin American and Eurasian market corridors.</p>
+          <ul class="card-list">
+            <li>FX market advisory</li>
+            <li>Cryptocurrency &amp; digital asset guidance</li>
+            <li>Cross-border financial consultation</li>
+            <li>Colombia–Russia financial corridor</li>
+            <li>Digital asset strategy &amp; management</li>
+          </ul>
+          <div class="card-disclaimer">
+            <svg viewBox="0 0 16 16" fill="currentColor" width="14" height="14"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 3.5a.75.75 0 110 1.5.75.75 0 010-1.5zM7.25 7h1.5v4.5h-1.5V7z"/></svg>
+            Advisory services only. Not financial or investment advice. All markets involve risk of loss.
+          </div>
+          <a href="#contact" class="card-link">Request advisory consultation <span aria-hidden="true">→</span></a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="division-card" data-reveal data-delay="200">
+          <div class="card-top">
+            <span class="card-number">03</span>
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="20" width="32" height="22" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M16 20V14a8 8 0 0116 0v6" stroke="currentColor" stroke-width="1.5"/><rect x="20" y="30" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/><line x1="14" y1="26" x2="14" y2="34" stroke="currentColor" stroke-width="1.5"/><line x1="34" y1="26" x2="34" y2="34" stroke="currentColor" stroke-width="1.5"/></svg>
+            </div>
+          </div>
+          <h3 class="card-title">Accommodation Services</h3>
+          <p class="card-subtitle">Premium Furnished Residences</p>
+          <p class="card-desc">Premium furnished apartments in Bogotá for executives, students, and globally mobile professionals. Where international travelers live — short-term flexibility, long-term comfort, premium positioning.</p>
+          <ul class="card-list">
+            <li>Premium furnished apartments</li>
+            <li>Corporate housing solutions</li>
+            <li>Short &amp; long-term stays</li>
+            <li>Business traveler amenities</li>
+            <li>Strategic Bogotá locations</li>
+          </ul>
+          <a href="#contact" class="card-link">Book a stay <span aria-hidden="true">→</span></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       THE FLYWHEEL
+  ============================================================ -->
+  <section class="flywheel-section">
+    <div class="container">
+      <div class="flywheel-grid">
+        <div class="flywheel-text" data-reveal>
+          <span class="section-label">The Integrated Model</span>
+          <h2 class="section-title">One Platform.<br/>Three Services.</h2>
+          <p class="flywheel-desc">What makes RusAndes different isn't any single division — it's how they connect. A client arrives through International Programs, stays in a RusAndes apartment, and navigates finances through Global Markets. One relationship. Three touchpoints. A flywheel no single-service competitor can replicate.</p>
+          <div class="flywheel-steps">
+            <div class="fw-step" data-reveal data-delay="100">
+              <span class="fw-step-num">01</span>
+              <div class="fw-step-text"><strong>International Programs</strong> brings the people — students, professionals, corporate delegations.</div>
+            </div>
+            <div class="fw-step" data-reveal data-delay="200">
+              <span class="fw-step-num">02</span>
+              <div class="fw-step-text"><strong>Accommodation Services</strong> captures them in-market — they need somewhere to live in Bogotá.</div>
+            </div>
+            <div class="fw-step" data-reveal data-delay="300">
+              <span class="fw-step-num">03</span>
+              <div class="fw-step-text"><strong>Global Markets</strong> solves the financial friction — they need to move money across borders.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flywheel-diagram-wrapper" data-reveal data-delay="200" aria-hidden="true">
+          <div class="flywheel-diagram">
+            <div class="fw-center">
+              <span class="fw-center-text">RusAndes</span>
+              <span class="fw-center-sub">Blockchain</span>
+            </div>
+            <div class="fw-node fw-node--1">
+              <div class="fw-node-inner">
+                <span class="fw-node-emoji">📚</span>
+                <span>International<br/>Programs</span>
+              </div>
+            </div>
+            <div class="fw-node fw-node--2">
+              <div class="fw-node-inner">
+                <span class="fw-node-emoji">📈</span>
+                <span>Global<br/>Markets</span>
+              </div>
+            </div>
+            <div class="fw-node fw-node--3">
+              <div class="fw-node-inner">
+                <span class="fw-node-emoji">🏢</span>
+                <span>Accommodation<br/>Services</span>
+              </div>
+            </div>
+            <svg class="fw-svg" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M150 60 L255 210 L45 210 Z" stroke="#C9A84C" stroke-width="1" stroke-dasharray="4 4" opacity="0.4"/>
+              <circle cx="150" cy="150" r="55" stroke="#C9A84C" stroke-width="0.5" opacity="0.2"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT
+  ============================================================ -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-visual" data-reveal>
+          <div class="portrait-card">
+            <!-- CEO PHOTO: drop assets/ceo-photo.jpg into the assets/ folder and the photo will appear automatically -->
+            <img src="assets/ceo-photo.jpg" alt="Andres Felipe Parra Peña — CEO &amp; Founder" class="portrait-photo" onerror="this.style.display='none'" />
+            <div class="portrait-initials">AFP</div>
+            <div class="portrait-glow" aria-hidden="true"></div>
+          </div>
+          <div class="about-markets">
+            <span class="market-pill">🇨🇴 Colombia</span>
+            <span class="market-pill">🇷🇺 Russia</span>
+            <span class="market-pill">🇹🇷 Turkey</span>
+            <span class="market-pill">🇺🇸 USA</span>
+            <span class="market-pill">🌐 Global</span>
+          </div>
+        </div>
+
+        <div class="about-text" data-reveal data-delay="100">
+          <span class="section-label">The Team</span>
+          <h2 class="section-title">Built from Real<br/>International Experience</h2>
+          <div class="ceo-block">
+            <div class="ceo-name-line">
+              <h3 class="ceo-name">Andres Felipe Parra Peña</h3>
+              <span class="ceo-title-badge">CEO &amp; Founder</span>
+            </div>
+            <div class="ceo-credentials">
+              <span>International Relations</span>
+              <span class="cred-sep">·</span>
+              <span>M.S. Strategic Management</span>
+              <span class="cred-sep">·</span>
+              <span>7 Years in Russia</span>
+            </div>
+          </div>
+          <p class="about-bio">
+            A professional with deep roots across continents — International Relations and a Master's in Strategic Management form the academic foundation, but seven years lived in Russia are what set RusAndes apart. Multilingual in Spanish, Russian, and English, with hands-on experience in investment markets and crypto trading, the company is built on genuine cross-cultural expertise rather than geographic arbitrage.
+          </p>
+          <p class="about-bio">
+            The Russia–Latin America corridor is one of the most underserved financial and educational pathways in the world. RusAndes was built to serve it.
+          </p>
+          <div class="mv-grid">
+            <div class="mv-card">
+              <h4 class="mv-heading">Mission</h4>
+              <p>Provide integrated international services across education, financial markets, and accommodation — creating practical solutions that connect people with global opportunities.</p>
+            </div>
+            <div class="mv-card">
+              <h4 class="mv-heading">Vision</h4>
+              <p>Become a recognized international services group bridging education, finance, and lifestyle — enabling cross-border mobility, financial access, and global connectivity.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       VALUES
+  ============================================================ -->
+  <section id="values" class="values">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-label">Our Foundation</span>
+        <h2 class="section-title">What We Stand For</h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-card" data-reveal data-delay="0">
+          <div class="value-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="1.5"/><path d="M20 4 Q26 10 26 20 Q26 30 20 36 Q14 30 14 20 Q14 10 20 4Z" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="4" y1="16" x2="36" y2="16" stroke="currentColor" stroke-width="1.2"/><line x1="4" y1="24" x2="36" y2="24" stroke="currentColor" stroke-width="1.2"/></svg>
+          </div>
+          <h3>Global Mindset</h3>
+          <p>Every decision is made with an international lens — respecting cultural nuance, navigating cross-border complexity, and thinking in systems that span continents.</p>
+        </div>
+        <div class="value-card" data-reveal data-delay="80">
+          <div class="value-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M20 4 L22 15 L32 10 L25 20 L36 22 L25 24 L32 30 L22 25 L20 36 L18 25 L8 30 L15 24 L4 22 L15 20 L8 10 L18 15 Z" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+          </div>
+          <h3>Integrity</h3>
+          <p>In financial advisory, language education, and accommodation — transparency and ethical conduct are non-negotiable. We operate within legal frameworks and disclose fully.</p>
+        </div>
+        <div class="value-card" data-reveal data-delay="160">
+          <div class="value-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M8 28 Q8 12 20 12 Q32 12 32 20 Q32 28 20 28 Q14 28 14 22" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="10,23 14,28 18,23" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+          </div>
+          <h3>Adaptability</h3>
+          <p>Global markets shift. Regulations evolve. Geopolitics reshape corridors. We stay flexible and ahead of change — a survival skill built into the company's DNA.</p>
+        </div>
+        <div class="value-card" data-reveal data-delay="240">
+          <div class="value-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none"><polygon points="20,4 24,15 36,15 26,23 30,35 20,27 10,35 14,23 4,15 16,15" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+          </div>
+          <h3>Excellence</h3>
+          <p>Premium positioning demands premium execution. Whether a language program, a financial consultation, or an apartment — the standard of delivery reflects the brand.</p>
+        </div>
+        <div class="value-card" data-reveal data-delay="320">
+          <div class="value-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="32" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="28" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="32" cy="28" r="3" stroke="currentColor" stroke-width="1.5"/><line x1="11" y1="13" x2="17" y2="17" stroke="currentColor" stroke-width="1.2"/><line x1="29" y1="13" x2="23" y2="17" stroke="currentColor" stroke-width="1.2"/><line x1="11" y1="27" x2="17" y2="23" stroke="currentColor" stroke-width="1.2"/><line x1="29" y1="27" x2="23" y2="23" stroke="currentColor" stroke-width="1.2"/></svg>
+          </div>
+          <h3>Connectivity</h3>
+          <p>We exist to create connections — between people and institutions, between markets and opportunities, between continents that rarely talk to each other.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT
+  ============================================================ -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <span class="section-label">Get in Touch</span>
+        <h2 class="section-title">Start the Conversation</h2>
+        <p class="section-desc">Whether you're interested in our programs, advisory services, or accommodations — we're ready to connect.</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-info" data-reveal>
+          <div class="contact-item">
+            <div class="contact-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+            </div>
+            <div>
+              <span class="ci-label">Email</span>
+              <a href="mailto:parrapenaandresfelipe13@gmail.com" class="ci-value">parrapenaandresfelipe13@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            </div>
+            <div>
+              <span class="ci-label">Headquarters</span>
+              <span class="ci-value">Bogotá D.C., Colombia</span>
+            </div>
+          </div>
+
+          <div class="phones-block">
+            <h4 class="phones-heading">Phone / WhatsApp</h4>
+            <div class="phone-row">
+              <span class="phone-flag" aria-label="United States">🇺🇸</span>
+              <div>
+                <span class="phone-country">United States</span>
+                <a href="tel:+17162499613" class="phone-number">+1 716-249-9613</a>
+              </div>
+            </div>
+            <div class="phone-row">
+              <span class="phone-flag" aria-label="Colombia">🇨🇴</span>
+              <div>
+                <span class="phone-country">Colombia</span>
+                <a href="tel:+573116161398" class="phone-number">+57 311-616-1398</a>
+              </div>
+            </div>
+            <div class="phone-row">
+              <span class="phone-flag" aria-label="Russia">🇷🇺</span>
+              <div>
+                <span class="phone-country">Russia</span>
+                <a href="tel:+79961232427" class="phone-number">+7 996-123-2427</a>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/573116161398" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Message on WhatsApp
+          </a>
+        </div>
+
+        <div class="contact-form-wrap" data-reveal data-delay="150">
+          <!-- To enable this form: sign up free at formspree.io, create a form, and replace YOUR_FORM_ID below -->
+          <form class="contact-form" id="contactForm" action="https://formspree.io/f/mvzyjqlg" method="POST" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="service">Service of Interest</label>
+              <select id="service" name="service">
+                <option value="">Select a division...</option>
+                <option value="international-programs">International Programs</option>
+                <option value="global-markets">Global Markets Advisory</option>
+                <option value="accommodation">Accommodation Services</option>
+                <option value="general">General Inquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us about your needs..." required></textarea>
+            </div>
+            <p class="form-fine-print">By submitting, you acknowledge that Global Markets communications are informational only and do not constitute financial or investment advice.</p>
+            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            <div class="form-success" id="formSuccess" aria-live="polite" hidden>
+              <svg viewBox="0 0 20 20" fill="currentColor" width="20" height="20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Message sent! We'll be in touch shortly.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo-group">
+            <svg viewBox="0 0 32 32" fill="none" width="28" aria-hidden="true">
+              <polygon points="16,2 28,9 28,23 16,30 4,23 4,9" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+              <circle cx="16" cy="16" r="4" fill="#C9A84C"/>
+            </svg>
+            <span class="footer-logo-name">RusAndes Blockchain</span>
+          </div>
+          <p class="footer-tagline">International Services Group</p>
+          <p class="footer-hq">Bogotá D.C., Colombia</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-nav-col">
+            <h4>Navigate</h4>
+            <ul>
+              <li><a href="#divisions">Services</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#values">Values</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-col">
+            <h4>Divisions</h4>
+            <ul>
+              <li><a href="#divisions">International Programs</a></li>
+              <li><a href="#divisions">Global Markets</a></li>
+              <li><a href="#divisions">Accommodation Services</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-col">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="mailto:parrapenaandresfelipe13@gmail.com">Email Us</a></li>
+              <li><a href="https://wa.me/573116161398" target="_blank" rel="noopener noreferrer">WhatsApp (CO)</a></li>
+              <li><a href="tel:+17162499613">Call US Line</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer-disclaimer" id="disclaimer">
+        <h4>Legal Disclaimer</h4>
+        <p><strong>Financial &amp; Markets Advisory:</strong> All content related to Global Markets, foreign exchange (FX), cryptocurrency, and digital assets is provided for <strong>informational and educational purposes only</strong> and does not constitute financial, investment, tax, or legal advice. Past performance of any financial instrument does not guarantee future results. Cryptocurrency and digital asset markets are highly volatile and involve substantial risk of loss, including the possible loss of all invested capital. RusAndes Blockchain provides advisory services only and is not a licensed broker, dealer, investment advisor, or financial planner under Colombian (SFC), US (SEC/FINRA), or any other jurisdiction's regulatory framework. Always consult a qualified financial professional before making any investment decision.</p>
+        <p><strong>Educational Services:</strong> Program availability, curricula, and institutional partnerships are subject to change without notice. Enrollment in language programs or university pathways does not guarantee admission, visa approval, or specific academic outcomes. Immigration and visa matters are the sole responsibility of the individual applicant.</p>
+        <p><strong>Accommodation Services:</strong> Property pricing, availability, and specifications are subject to change. All bookings are governed by the terms and conditions provided at the time of reservation. Properties comply with applicable local regulations.</p>
+        <p><strong>General:</strong> The information on this website is provided in good faith and for general informational purposes only. RusAndes Blockchain makes no representations or warranties of any kind regarding the accuracy, completeness, or suitability of any information on this site. Use of this website constitutes acceptance of these terms.</p>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2025 RusAndes Blockchain. All rights reserved. Bogotá D.C., Colombia.</p>
+        <div class="footer-bottom-links">
+          <a href="#disclaimer">Disclaimer</a>
+          <span aria-hidden="true">·</span>
+          <a href="privacy.html">Privacy Policy</a>
+          <span aria-hidden="true">·</span>
+          <a href="terms.html">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top button -->
+  <button class="scroll-top" id="scrollTop" aria-label="Back to top">
+    <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18"><path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

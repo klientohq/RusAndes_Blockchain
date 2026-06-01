@@ -1,0 +1,104 @@
+/* Shared styles for privacy.html and terms.html */
+
+.navbar.scrolled { background: rgba(5, 8, 26, 0.97); backdrop-filter: blur(16px); box-shadow: 0 1px 0 var(--border); }
+
+.nav-back {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-2);
+  transition: color var(--transition);
+}
+
+.nav-back:hover { color: var(--gold-light); }
+
+.legal-page {
+  padding: calc(var(--nav-h) + 60px) 0 80px;
+  min-height: 100vh;
+  background: var(--bg-0);
+}
+
+.legal-header {
+  text-align: center;
+  margin-bottom: 64px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--border);
+}
+
+.legal-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 400;
+  color: var(--text-0);
+  margin-bottom: 12px;
+}
+
+.legal-date {
+  font-size: 13px;
+  color: var(--text-3);
+}
+
+.legal-body {
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.legal-section h2 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text-0);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.legal-section p {
+  font-size: 15px;
+  color: var(--text-2);
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.legal-section p:last-child { margin-bottom: 0; }
+
+.legal-section ul {
+  margin: 12px 0;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.legal-section ul li {
+  font-size: 15px;
+  color: var(--text-2);
+  line-height: 1.7;
+  padding-left: 20px;
+  position: relative;
+}
+
+.legal-section ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 6px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.legal-section a { color: var(--gold); }
+.legal-section a:hover { color: var(--gold-light); text-decoration: underline; }
+.legal-section strong { color: var(--text-0); }
+
+.legal-back {
+  max-width: var(--container-narrow);
+  margin: 64px auto 0;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+}
+
+.legal-footer { padding: 24px 0; }

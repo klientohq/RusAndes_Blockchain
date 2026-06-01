@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Node (used only for local preview server)
+node_modules/
+npm-debug.log*
+
+# Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Local env / secrets
+.env
+.env.local
+
+# OS thumbnails
+Thumbs.db
