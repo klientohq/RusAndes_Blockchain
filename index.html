@@ -62,43 +62,53 @@
        HERO
   ============================================================ -->
   <section id="home" class="hero">
-    <canvas id="particleCanvas" class="hero-canvas" aria-hidden="true"></canvas>
-    <div class="hero-overlay" aria-hidden="true"></div>
 
+    <!-- LEFT: Dark brand panel — logo lives inside the particle animation -->
+    <div class="hero-brand-panel">
+      <canvas id="particleCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-brand-glow" aria-hidden="true"></div>
+      <div class="hero-brand-content">
+        <svg class="hero-brand-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <polygon points="32,4 58,18 58,46 32,60 6,46 6,18" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+          <polygon points="32,14 48,23 48,41 32,50 16,41 16,23" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.4"/>
+          <circle cx="32" cy="32" r="6" fill="#C9A84C"/>
+          <line x1="32" y1="4"  x2="32" y2="14" stroke="#C9A84C" stroke-width="1.5"/>
+          <line x1="58" y1="18" x2="48" y2="23" stroke="#C9A84C" stroke-width="1.5"/>
+          <line x1="58" y1="46" x2="48" y2="41" stroke="#C9A84C" stroke-width="1.5"/>
+          <line x1="32" y1="60" x2="32" y2="50" stroke="#C9A84C" stroke-width="1.5"/>
+          <line x1="6"  y1="46" x2="16" y2="41" stroke="#C9A84C" stroke-width="1.5"/>
+          <line x1="6"  y1="18" x2="16" y2="23" stroke="#C9A84C" stroke-width="1.5"/>
+        </svg>
+        <div class="hero-brand-name">RusAndes</div>
+        <div class="hero-brand-blockchain">Blockchain</div>
+        <div class="hero-brand-divider"></div>
+        <div class="hero-brand-tagline">International Services Group</div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Clean light content -->
     <div class="hero-content">
       <div class="hero-badge hero-anim hero-anim--1">
         <span class="badge-dot"></span>
         Bogotá D.C., Colombia &nbsp;·&nbsp; Est. 2024
       </div>
       <h1 class="hero-title hero-anim hero-anim--2">
-        <span class="hero-title-main">RusAndes</span>
-        <span class="hero-title-accent">Blockchain</span>
+        Bridging<br/>Latin America<br/>with the World
       </h1>
-      <p class="hero-tagline hero-anim hero-anim--3">International Services Group</p>
-      <p class="hero-description hero-anim hero-anim--4">
-        Bridging Latin America with Russia, Turkey, and global markets —<br class="hero-br" />
-        through education, finance, and premium accommodation.
+      <p class="hero-description hero-anim hero-anim--3">
+        Education, finance, and premium accommodation — connecting people across Russia, Turkey, Colombia, and global markets.
       </p>
-      <div class="hero-divisions hero-anim hero-anim--5">
-        <span class="division-tag">
-          <span class="tag-icon">📚</span>International Programs
-        </span>
-        <span class="division-tag">
-          <span class="tag-icon">📈</span>Global Markets
-        </span>
-        <span class="division-tag">
-          <span class="tag-icon">🏢</span>Accommodation Services
-        </span>
+      <div class="hero-divisions hero-anim hero-anim--4">
+        <span class="division-tag"><span class="tag-icon">📚</span>International Programs</span>
+        <span class="division-tag"><span class="tag-icon">📈</span>Global Markets</span>
+        <span class="division-tag"><span class="tag-icon">🏢</span>Accommodation</span>
       </div>
-      <div class="hero-ctas hero-anim hero-anim--6">
+      <div class="hero-ctas hero-anim hero-anim--5">
         <a href="#divisions" class="btn btn-primary">Explore Services</a>
         <a href="#contact" class="btn btn-ghost">Get in Touch</a>
       </div>
     </div>
 
-    <a href="#divisions" class="hero-scroll-indicator" aria-label="Scroll down">
-      <div class="scroll-dot"></div>
-    </a>
   </section>
 
   <!-- ============================================================
@@ -143,70 +153,30 @@
 
         <!-- Card 1 -->
         <div class="division-card" data-reveal data-delay="0">
-          <div class="card-top">
-            <span class="card-number">01</span>
-            <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5"/><path d="M24 10 Q32 16 32 24 Q32 32 24 38 Q16 32 16 24 Q16 16 24 10Z" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="10" y1="20" x2="38" y2="20" stroke="currentColor" stroke-width="1.5"/><line x1="10" y1="28" x2="38" y2="28" stroke="currentColor" stroke-width="1.5"/></svg>
-            </div>
-          </div>
+          <span class="card-number">01</span>
           <h3 class="card-title">International Programs</h3>
-          <p class="card-subtitle">Education &amp; Language</p>
-          <p class="card-desc">Unlocking academic and language opportunities across borders. We connect students and professionals with English, Russian, and Turkish programs — a corridor most Latin American providers completely ignore.</p>
-          <ul class="card-list">
-            <li>Language courses: English · Russian · Turkish</li>
-            <li>University pathway &amp; enrollment</li>
-            <li>TORFL &amp; YDS certification prep</li>
-            <li>Corporate language training</li>
-            <li>International academic mobility</li>
-          </ul>
-          <a href="#contact" class="card-link">Inquire about programs <span aria-hidden="true">→</span></a>
+          <span class="card-tag">Education &amp; Language</span>
+          <p class="card-desc">Language courses, university pathways, and academic mobility in English, Russian, and Turkish — the most underserved educational corridor in Latin America.</p>
+          <a href="#contact" class="card-link">Inquire about programs →</a>
         </div>
 
-        <!-- Card 2 (Featured) -->
+        <!-- Card 2 -->
         <div class="division-card division-card--featured" data-reveal data-delay="100">
-          <div class="card-featured-badge">Core Division</div>
-          <div class="card-top">
-            <span class="card-number">02</span>
-            <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none"><polyline points="6,36 16,22 24,28 36,12 42,18" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><polyline points="36,12 42,12 42,18" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="6" y="38" width="36" height="2" fill="currentColor" opacity="0.3"/><circle cx="16" cy="22" r="2" fill="currentColor"/><circle cx="24" cy="28" r="2" fill="currentColor"/><circle cx="36" cy="12" r="2" fill="currentColor"/></svg>
-            </div>
-          </div>
+          <span class="card-number">02</span>
           <h3 class="card-title">Global Markets</h3>
-          <p class="card-subtitle">Finance &amp; Digital Assets</p>
-          <p class="card-desc">Navigate international financial landscapes with confidence. Advisory services in foreign exchange, cryptocurrency, and digital assets — with deep expertise in Latin American and Eurasian market corridors.</p>
-          <ul class="card-list">
-            <li>FX market advisory</li>
-            <li>Cryptocurrency &amp; digital asset guidance</li>
-            <li>Cross-border financial consultation</li>
-            <li>Colombia–Russia financial corridor</li>
-            <li>Digital asset strategy &amp; management</li>
-          </ul>
-          <div class="card-disclaimer">
-            <svg viewBox="0 0 16 16" fill="currentColor" width="14" height="14"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm0 3.5a.75.75 0 110 1.5.75.75 0 010-1.5zM7.25 7h1.5v4.5h-1.5V7z"/></svg>
-            Advisory services only. Not financial or investment advice. All markets involve risk of loss.
-          </div>
-          <a href="#contact" class="card-link">Request advisory consultation <span aria-hidden="true">→</span></a>
+          <span class="card-tag">Finance &amp; Digital Assets</span>
+          <p class="card-desc">Advisory services in foreign exchange, cryptocurrency, and digital assets — with deep expertise in the Colombia–Russia financial corridor and cross-border markets.</p>
+          <p class="card-note">Advisory only. Not financial advice. All markets involve risk.</p>
+          <a href="#contact" class="card-link">Request a consultation →</a>
         </div>
 
         <!-- Card 3 -->
         <div class="division-card" data-reveal data-delay="200">
-          <div class="card-top">
-            <span class="card-number">03</span>
-            <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="20" width="32" height="22" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M16 20V14a8 8 0 0116 0v6" stroke="currentColor" stroke-width="1.5"/><rect x="20" y="30" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/><line x1="14" y1="26" x2="14" y2="34" stroke="currentColor" stroke-width="1.5"/><line x1="34" y1="26" x2="34" y2="34" stroke="currentColor" stroke-width="1.5"/></svg>
-            </div>
-          </div>
+          <span class="card-number">03</span>
           <h3 class="card-title">Accommodation Services</h3>
-          <p class="card-subtitle">Premium Furnished Residences</p>
-          <p class="card-desc">Premium furnished apartments in Bogotá for executives, students, and globally mobile professionals. Where international travelers live — short-term flexibility, long-term comfort, premium positioning.</p>
-          <ul class="card-list">
-            <li>Premium furnished apartments</li>
-            <li>Corporate housing solutions</li>
-            <li>Short &amp; long-term stays</li>
-            <li>Business traveler amenities</li>
-            <li>Strategic Bogotá locations</li>
-          </ul>
-          <a href="#contact" class="card-link">Book a stay <span aria-hidden="true">→</span></a>
+          <span class="card-tag">Premium Residences · Bogotá</span>
+          <p class="card-desc">Fully furnished premium apartments for executives, students, and internationally mobile professionals. Short and long-term stays in Bogotá's top neighborhoods.</p>
+          <a href="#contact" class="card-link">Book a stay →</a>
         </div>
 
       </div>
@@ -218,56 +188,41 @@
   ============================================================ -->
   <section class="flywheel-section">
     <div class="container">
-      <div class="flywheel-grid">
-        <div class="flywheel-text" data-reveal>
-          <span class="section-label">The Integrated Model</span>
-          <h2 class="section-title">One Platform.<br/>Three Services.</h2>
-          <p class="flywheel-desc">What makes RusAndes different isn't any single division — it's how they connect. A client arrives through International Programs, stays in a RusAndes apartment, and navigates finances through Global Markets. One relationship. Three touchpoints. A flywheel no single-service competitor can replicate.</p>
-          <div class="flywheel-steps">
-            <div class="fw-step" data-reveal data-delay="100">
-              <span class="fw-step-num">01</span>
-              <div class="fw-step-text"><strong>International Programs</strong> brings the people — students, professionals, corporate delegations.</div>
-            </div>
-            <div class="fw-step" data-reveal data-delay="200">
-              <span class="fw-step-num">02</span>
-              <div class="fw-step-text"><strong>Accommodation Services</strong> captures them in-market — they need somewhere to live in Bogotá.</div>
-            </div>
-            <div class="fw-step" data-reveal data-delay="300">
-              <span class="fw-step-num">03</span>
-              <div class="fw-step-text"><strong>Global Markets</strong> solves the financial friction — they need to move money across borders.</div>
-            </div>
-          </div>
-        </div>
+      <div class="section-header" data-reveal>
+        <span class="section-label">The Integrated Model</span>
+        <h2 class="section-title">One Platform. Three Services.</h2>
+        <p class="section-desc">Each division feeds the next — a flywheel no single-service competitor can replicate.</p>
+      </div>
 
-        <div class="flywheel-diagram-wrapper" data-reveal data-delay="200" aria-hidden="true">
-          <div class="flywheel-diagram">
-            <div class="fw-center">
-              <span class="fw-center-text">RusAndes</span>
-              <span class="fw-center-sub">Blockchain</span>
-            </div>
-            <div class="fw-node fw-node--1">
-              <div class="fw-node-inner">
-                <span class="fw-node-emoji">📚</span>
-                <span>International<br/>Programs</span>
-              </div>
-            </div>
-            <div class="fw-node fw-node--2">
-              <div class="fw-node-inner">
-                <span class="fw-node-emoji">📈</span>
-                <span>Global<br/>Markets</span>
-              </div>
-            </div>
-            <div class="fw-node fw-node--3">
-              <div class="fw-node-inner">
-                <span class="fw-node-emoji">🏢</span>
-                <span>Accommodation<br/>Services</span>
-              </div>
-            </div>
-            <svg class="fw-svg" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M150 60 L255 210 L45 210 Z" stroke="#C9A84C" stroke-width="1" stroke-dasharray="4 4" opacity="0.4"/>
-              <circle cx="150" cy="150" r="55" stroke="#C9A84C" stroke-width="0.5" opacity="0.2"/>
-            </svg>
+      <div class="flywheel-diagram-wrapper" data-reveal data-delay="150" aria-hidden="true">
+        <div class="flywheel-diagram">
+          <div class="fw-center">
+            <span class="fw-center-text">RusAndes</span>
+            <span class="fw-center-sub">Blockchain</span>
           </div>
+          <div class="fw-node fw-node--1">
+            <div class="fw-node-inner">
+              <span class="fw-node-emoji">📚</span>
+              <span>International<br/>Programs</span>
+            </div>
+          </div>
+          <div class="fw-node fw-node--2">
+            <div class="fw-node-inner">
+              <span class="fw-node-emoji">📈</span>
+              <span>Global<br/>Markets</span>
+            </div>
+          </div>
+          <div class="fw-node fw-node--3">
+            <div class="fw-node-inner">
+              <span class="fw-node-emoji">🏢</span>
+              <span>Accommodation<br/>Services</span>
+            </div>
+          </div>
+          <svg class="fw-svg" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M150 55 L262 218 L38 218 Z" stroke="#C9A84C" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.5"/>
+            <circle cx="150" cy="150" r="60" stroke="#C9A84C" stroke-width="0.6" opacity="0.18"/>
+            <circle cx="150" cy="150" r="95" stroke="#C9A84C" stroke-width="0.4" opacity="0.1"/>
+          </svg>
         </div>
       </div>
     </div>
@@ -280,12 +235,29 @@
     <div class="container">
       <div class="about-grid">
 
+        <!-- CEO PHOTO: full-height static panel. To swap photo: replace assets/ceo-photo.jpg -->
         <div class="about-visual" data-reveal>
-          <div class="portrait-card">
-            <!-- CEO PHOTO: drop assets/ceo-photo.jpg into the assets/ folder and the photo will appear automatically -->
-            <img src="assets/ceo-photo.jpg" alt="Andres Felipe Parra Peña — CEO &amp; Founder" class="portrait-photo" onerror="this.style.display='none'" />
-            <div class="portrait-initials">AFP</div>
-            <div class="portrait-glow" aria-hidden="true"></div>
+          <img src="assets/ceo-photo.jpg"
+               alt="Andres Felipe Parra Peña — CEO &amp; Founder of RusAndes Blockchain"
+               class="ceo-photo-full" />
+          <div class="ceo-photo-fallback" aria-hidden="true">
+            <span class="portrait-initials">AFP</span>
+          </div>
+          <div class="about-photo-caption">
+            <span class="about-photo-name">Andres Felipe Parra Peña</span>
+            <span class="about-photo-title">CEO &amp; Founder</span>
+          </div>
+        </div>
+
+        <div class="about-text" data-reveal data-delay="100">
+          <span class="section-label">The Team</span>
+          <h2 class="section-title">Built from Real<br/>International Experience</h2>
+          <div class="ceo-credentials">
+            <span>International Relations</span>
+            <span class="cred-sep">·</span>
+            <span>M.S. Strategic Management</span>
+            <span class="cred-sep">·</span>
+            <span>7 Years in Russia</span>
           </div>
           <div class="about-markets">
             <span class="market-pill">🇨🇴 Colombia</span>
@@ -293,24 +265,6 @@
             <span class="market-pill">🇹🇷 Turkey</span>
             <span class="market-pill">🇺🇸 USA</span>
             <span class="market-pill">🌐 Global</span>
-          </div>
-        </div>
-
-        <div class="about-text" data-reveal data-delay="100">
-          <span class="section-label">The Team</span>
-          <h2 class="section-title">Built from Real<br/>International Experience</h2>
-          <div class="ceo-block">
-            <div class="ceo-name-line">
-              <h3 class="ceo-name">Andres Felipe Parra Peña</h3>
-              <span class="ceo-title-badge">CEO &amp; Founder</span>
-            </div>
-            <div class="ceo-credentials">
-              <span>International Relations</span>
-              <span class="cred-sep">·</span>
-              <span>M.S. Strategic Management</span>
-              <span class="cred-sep">·</span>
-              <span>7 Years in Russia</span>
-            </div>
           </div>
           <p class="about-bio">
             A professional with deep roots across continents — International Relations and a Master's in Strategic Management form the academic foundation, but seven years lived in Russia are what set RusAndes apart. Multilingual in Spanish, Russian, and English, with hands-on experience in investment markets and crypto trading, the company is built on genuine cross-cultural expertise rather than geographic arbitrage.
