@@ -62,57 +62,43 @@
        HERO
   ============================================================ -->
   <section id="home" class="hero">
-
-    <!-- Particle canvas fills the entire hero — one unified dark canvas -->
     <canvas id="particleCanvas" class="hero-canvas" aria-hidden="true"></canvas>
     <div class="hero-overlay" aria-hidden="true"></div>
 
-    <!-- Both columns float on the same canvas — no boxes, no color split -->
-    <div class="hero-inner">
-
-      <!-- LEFT: brand identity, lives inside the particle animation -->
-      <div class="hero-brand">
-        <svg class="hero-brand-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <polygon points="32,4 58,18 58,46 32,60 6,46 6,18" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
-          <polygon points="32,14 48,23 48,41 32,50 16,41 16,23" fill="none" stroke="#C9A84C" stroke-width="0.8" opacity="0.4"/>
-          <circle cx="32" cy="32" r="6" fill="#C9A84C"/>
-          <line x1="32" y1="4"  x2="32" y2="14" stroke="#C9A84C" stroke-width="1.5"/>
-          <line x1="58" y1="18" x2="48" y2="23" stroke="#C9A84C" stroke-width="1.5"/>
-          <line x1="58" y1="46" x2="48" y2="41" stroke="#C9A84C" stroke-width="1.5"/>
-          <line x1="32" y1="60" x2="32" y2="50" stroke="#C9A84C" stroke-width="1.5"/>
-          <line x1="6"  y1="46" x2="16" y2="41" stroke="#C9A84C" stroke-width="1.5"/>
-          <line x1="6"  y1="18" x2="16" y2="23" stroke="#C9A84C" stroke-width="1.5"/>
-        </svg>
-        <div class="hero-brand-name">RusAndes</div>
-        <div class="hero-brand-blockchain">Blockchain</div>
-        <div class="hero-brand-divider"></div>
-        <div class="hero-brand-tagline">International Services Group</div>
+    <div class="hero-content">
+      <div class="hero-badge hero-anim hero-anim--1">
+        <span class="badge-dot"></span>
+        Bogotá D.C., Colombia &nbsp;·&nbsp; Est. 2024
       </div>
-
-      <!-- RIGHT: value proposition -->
-      <div class="hero-content">
-        <div class="hero-badge hero-anim hero-anim--1">
-          <span class="badge-dot"></span>
-          Bogotá D.C., Colombia &nbsp;·&nbsp; Est. 2024
-        </div>
-        <h1 class="hero-title hero-anim hero-anim--2">
-          Bridging<br/>Latin America<br/>with the World
-        </h1>
-        <p class="hero-description hero-anim hero-anim--3">
-          Education, finance, and premium accommodation — connecting people across Russia, Turkey, Colombia, and global markets.
-        </p>
-        <div class="hero-divisions hero-anim hero-anim--4">
-          <span class="division-tag"><span class="tag-icon">📚</span>International Programs</span>
-          <span class="division-tag"><span class="tag-icon">📈</span>Global Markets</span>
-          <span class="division-tag"><span class="tag-icon">🏢</span>Accommodation</span>
-        </div>
-        <div class="hero-ctas hero-anim hero-anim--5">
-          <a href="#divisions" class="btn btn-primary">Explore Services</a>
-          <a href="#contact" class="btn btn-ghost-light">Get in Touch</a>
-        </div>
+      <h1 class="hero-title hero-anim hero-anim--2">
+        <span class="hero-title-main">RusAndes</span>
+        <span class="hero-title-accent">Blockchain</span>
+      </h1>
+      <p class="hero-tagline hero-anim hero-anim--3">International Services Group</p>
+      <p class="hero-description hero-anim hero-anim--4">
+        Bridging Latin America with Russia, Turkey, and global markets —<br class="hero-br" />
+        through education, finance, and premium accommodation.
+      </p>
+      <div class="hero-divisions hero-anim hero-anim--5">
+        <span class="division-tag">
+          <span class="tag-icon">📚</span>International Programs
+        </span>
+        <span class="division-tag">
+          <span class="tag-icon">📈</span>Global Markets
+        </span>
+        <span class="division-tag">
+          <span class="tag-icon">🏢</span>Accommodation Services
+        </span>
       </div>
-
+      <div class="hero-ctas hero-anim hero-anim--6">
+        <a href="#divisions" class="btn btn-primary">Explore Services</a>
+        <a href="#contact" class="btn btn-ghost-light">Get in Touch</a>
+      </div>
     </div>
+
+    <a href="#divisions" class="hero-scroll-indicator" aria-label="Scroll down">
+      <div class="scroll-dot"></div>
+    </a>
   </section>
 
   <!-- ============================================================
