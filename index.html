@@ -11,7 +11,7 @@
   <title>RusAndes Blockchain | International Services Group</title>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Cpolygon points='22,2 40,12 40,32 22,42 4,32 4,12' fill='%2306091A' stroke='%23C9A84C' stroke-width='2'/%3E%3Ccircle cx='22' cy='22' r='5' fill='%23C9A84C'/%3E%3C/svg%3E" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Crect x='4' y='4' width='36' height='36' rx='10' fill='%23050B1F'/%3E%3Cpath d='M12 30L20 12L24 24L32 14' fill='none' stroke='%23D7B85F' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='14' r='3' fill='%2326B7C8'/%3E%3C/svg%3E" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,15 +27,17 @@
     <div class="nav-container">
       <a href="#home" class="nav-logo">
         <svg class="logo-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <polygon points="22,4 38,13 38,31 22,40 6,31 6,13" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
-          <polygon points="22,10 32,16 32,28 22,34 12,28 12,16" fill="none" stroke="#C9A84C" stroke-width="1" opacity="0.5"/>
-          <circle cx="22" cy="22" r="4" fill="#C9A84C"/>
-          <line x1="22" y1="4" x2="22" y2="10" stroke="#C9A84C" stroke-width="1.5"/>
-          <line x1="38" y1="13" x2="32" y2="16" stroke="#C9A84C" stroke-width="1.5"/>
-          <line x1="38" y1="31" x2="32" y2="28" stroke="#C9A84C" stroke-width="1.5"/>
-          <line x1="22" y1="40" x2="22" y2="34" stroke="#C9A84C" stroke-width="1.5"/>
-          <line x1="6" y1="31" x2="12" y2="28" stroke="#C9A84C" stroke-width="1.5"/>
-          <line x1="6" y1="13" x2="12" y2="16" stroke="#C9A84C" stroke-width="1.5"/>
+          <defs>
+            <linearGradient id="logoMarkGradient" x1="9" y1="35" x2="36" y2="9" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#B89338"/>
+              <stop offset="0.55" stop-color="#F0CF72"/>
+              <stop offset="1" stop-color="#26B7C8"/>
+            </linearGradient>
+          </defs>
+          <rect x="4" y="4" width="36" height="36" rx="10" fill="#050B1F"/>
+          <path d="M12 30L20 12L24 24L32 14" stroke="url(#logoMarkGradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M13 31H31" stroke="#F0CF72" stroke-width="1.4" stroke-linecap="round" opacity="0.55"/>
+          <circle cx="32" cy="14" r="3.5" fill="#26B7C8"/>
         </svg>
         <div class="logo-text-group">
           <span class="logo-name">RusAndes</span>
@@ -112,12 +114,12 @@
       </div>
       <div class="stat-sep" aria-hidden="true"></div>
       <div class="stat-item">
-        <span class="stat-number">4+</span>
+        <span class="stat-number">8</span>
         <span class="stat-label">Countries Served</span>
       </div>
       <div class="stat-sep" aria-hidden="true"></div>
       <div class="stat-item">
-        <span class="stat-number">3</span>
+        <span class="stat-number">4</span>
         <span class="stat-label">Languages Offered</span>
       </div>
       <div class="stat-sep" aria-hidden="true"></div>
@@ -146,7 +148,14 @@
           <span class="card-number">01</span>
           <h3 class="card-title">International Programs</h3>
           <span class="card-tag">Education &amp; Language</span>
-          <p class="card-desc">Language courses, university pathways, and academic mobility in English, Russian, and Turkish — the most underserved educational corridor in Latin America.</p>
+          <p class="card-desc">Language courses, university pathways, and academic mobility in Spanish, English, Russian, and Turkish — led by native teachers with professional degrees in languages and education.</p>
+          <ul class="card-list">
+            <li>Native instructors with formal teaching credentials.</li>
+            <li>Study abroad programs in Russia, Turkey, Colombia, Mexico, and the Czech Republic.</li>
+            <li>University pathway guidance for high-quality international institutions at fair, accessible student pricing.</li>
+            <li>Arrival, accommodation, and cultural adaptation support with native local teams in each destination.</li>
+            <li>Scholarship opportunity guidance for qualified students.</li>
+          </ul>
           <a href="#contact" class="card-link">Inquire about programs →</a>
         </div>
 
@@ -155,8 +164,15 @@
           <span class="card-number">02</span>
           <h3 class="card-title">Global Markets</h3>
           <span class="card-tag">Finance &amp; Digital Assets</span>
-          <p class="card-desc">Advisory services in foreign exchange, cryptocurrency, and digital assets — with deep expertise in the Colombia–Russia financial corridor and cross-border markets.</p>
-          <p class="card-note">Advisory only. Not financial advice. All markets involve risk.</p>
+          <p class="card-desc">Portfolio construction, market access, and guided brokerage support across global assets — with experience in the Colombia, US, Turkey, Russia, and cross-border corridors.</p>
+          <ul class="card-list">
+            <li>Short-term and long-term portfolio strategies.</li>
+            <li>High-risk and low-risk allocation planning.</li>
+            <li>Assets in cryptocurrencies, currencies, US, Colombian, Turkish, and Russian equities.</li>
+            <li>Hydrocarbons and commodities market exposure.</li>
+            <li>Broker guidance designed to teach clients how to build finances with confidence in global markets.</li>
+          </ul>
+          <p class="card-note">Professional advisory and education backed by 3 years of experience in investment markets and new technologies.</p>
           <a href="#contact" class="card-link">Request a consultation →</a>
         </div>
 
@@ -165,10 +181,40 @@
           <span class="card-number">03</span>
           <h3 class="card-title">Accommodation Services</h3>
           <span class="card-tag">Premium Residences · Bogotá</span>
-          <p class="card-desc">Fully furnished premium apartments for executives, students, and internationally mobile professionals. Short and long-term stays in Bogotá's top neighborhoods.</p>
+          <p class="card-desc">Accommodation, Airbnb, transport, and tourism services with excellent preferential pricing for clients across our locations and partner network.</p>
+          <ul class="card-list">
+            <li>Fully furnished stays for executives, students, and internationally mobile professionals.</li>
+            <li>Special accommodation and Airbnb rates for RusAndes clients.</li>
+            <li>Transportation and tourism support with native local guides in each operating location.</li>
+          </ul>
           <a href="#contact" class="card-link">Book a stay →</a>
         </div>
 
+      </div>
+
+      <div class="division-proof" data-reveal data-delay="260">
+        <p>This system was built from the real international experience of the RusAndes team and is connected with native professionals, companies, headquarters, and partners across every operating market. RusAndes Blockchain is registered and has a physical headquarters in Bogotá, Colombia.</p>
+        <p class="division-proof-line">If you are looking to change your future, you are in the right place.</p>
+      </div>
+
+      <div class="service-matrix" data-reveal data-delay="320">
+        <div class="matrix-panel">
+          <span class="matrix-label">Countries Served</span>
+          <div class="pill-row">
+            <span>Colombia</span><span>Ecuador</span><span>Peru</span><span>Mexico</span><span>United States</span><span>Spain</span><span>Turkey</span><span>Russia</span>
+          </div>
+        </div>
+        <div class="matrix-panel">
+          <span class="matrix-label">Languages</span>
+          <div class="pill-row">
+            <span>Spanish</span><span>English</span><span>Russian</span><span>Turkish</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="vip-banner" data-reveal data-delay="380">
+        <span class="vip-kicker">VIP Clients</span>
+        <p>Clients can qualify for VIP status by reaching an investment threshold in any RusAndes division. VIP clients receive preferential benefits across all divisions, services, countries, company locations, and partner offices.</p>
       </div>
     </div>
   </section>
@@ -251,16 +297,20 @@
           </div>
           <div class="about-markets">
             <span class="market-pill">🇨🇴 Colombia</span>
+            <span class="market-pill">🇪🇨 Ecuador</span>
+            <span class="market-pill">🇵🇪 Peru</span>
+            <span class="market-pill">🇲🇽 Mexico</span>
             <span class="market-pill">🇷🇺 Russia</span>
             <span class="market-pill">🇹🇷 Turkey</span>
+            <span class="market-pill">🇪🇸 Spain</span>
             <span class="market-pill">🇺🇸 USA</span>
             <span class="market-pill">🌐 Global</span>
           </div>
           <p class="about-bio">
-            A professional with deep roots across continents — International Relations and a Master's in Strategic Management form the academic foundation, but seven years lived in Russia are what set RusAndes apart. Multilingual in Spanish, Russian, and English, with hands-on experience in investment markets and crypto trading, the company is built on genuine cross-cultural expertise rather than geographic arbitrage.
+            A professional with deep roots across continents — International Relations and a Master's in Strategic Management form the academic foundation, but seven years lived in Russia are what set RusAndes apart. Multilingual in Spanish, Russian, English, and Turkish, with hands-on experience in investment markets and crypto trading, the company is built on genuine cross-cultural expertise rather than geographic arbitrage.
           </p>
           <p class="about-bio">
-            The Russia–Latin America corridor is one of the most underserved financial and educational pathways in the world. RusAndes was built to serve it.
+            The Russia–Latin America corridor is one of the most underserved financial and educational pathways in the world. RusAndes was built to serve it through native teams, partner companies, and a registered physical headquarters in Bogotá, Colombia.
           </p>
           <div class="mv-grid">
             <div class="mv-card">
@@ -347,7 +397,7 @@
             </div>
             <div>
               <span class="ci-label">Email</span>
-              <a href="mailto:parrapenaandresfelipe13@gmail.com" class="ci-value">parrapenaandresfelipe13@gmail.com</a>
+              <a href="mailto:RusAndiblockchain@gmail.com" class="ci-value">RusAndiblockchain@gmail.com</a>
             </div>
           </div>
 
@@ -362,33 +412,30 @@
           </div>
 
           <div class="phones-block">
-            <h4 class="phones-heading">Phone / WhatsApp</h4>
+            <h4 class="phones-heading">Direct Channels</h4>
             <div class="phone-row">
-              <span class="phone-flag" aria-label="United States">🇺🇸</span>
+              <span class="phone-flag" aria-label="WhatsApp">✓</span>
               <div>
-                <span class="phone-country">United States</span>
-                <a href="tel:+17162499613" class="phone-number">+1 716-249-9613</a>
+                <span class="phone-country">WhatsApp</span>
+                <a href="https://wa.me/79961232427" class="phone-number" target="_blank" rel="noopener noreferrer">+7 996 1232427</a>
               </div>
             </div>
             <div class="phone-row">
-              <span class="phone-flag" aria-label="Colombia">🇨🇴</span>
+              <span class="phone-flag" aria-label="Telegram">✦</span>
               <div>
-                <span class="phone-country">Colombia</span>
-                <a href="tel:+573116161398" class="phone-number">+57 311-616-1398</a>
-              </div>
-            </div>
-            <div class="phone-row">
-              <span class="phone-flag" aria-label="Russia">🇷🇺</span>
-              <div>
-                <span class="phone-country">Russia</span>
-                <a href="tel:+79961232427" class="phone-number">+7 996-123-2427</a>
+                <span class="phone-country">Telegram</span>
+                <a href="https://t.me/+17165443701" class="phone-number" target="_blank" rel="noopener noreferrer">+1 7165443701</a>
               </div>
             </div>
           </div>
 
-          <a href="https://wa.me/573116161398" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/79961232427" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             Message on WhatsApp
+          </a>
+          <a href="https://t.me/+17165443701" class="telegram-btn" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.9 4.1 18.7 19c-.2 1.1-.9 1.4-1.8.9l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.3L6.1 12.4 1.1 10.8c-1.1-.3-1.1-1.1.2-1.6L20.7 1.7c.9-.3 1.7.2 1.2 2.4Z"/></svg>
+            Message on Telegram
           </a>
         </div>
 
@@ -419,7 +466,7 @@
               <label for="message">Message</label>
               <textarea id="message" name="message" rows="5" placeholder="Tell us about your needs..." required></textarea>
             </div>
-            <p class="form-fine-print">By submitting, you acknowledge that Global Markets communications are informational only and do not constitute financial or investment advice.</p>
+            <p class="form-fine-print">By submitting, you acknowledge that Global Markets communications are educational and advisory in nature and do not constitute individualized legal or tax advice.</p>
             <button type="submit" class="btn btn-primary btn-block">Send Message</button>
             <div class="form-success" id="formSuccess" aria-live="polite" hidden>
               <svg viewBox="0 0 20 20" fill="currentColor" width="20" height="20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
@@ -440,9 +487,11 @@
       <div class="footer-top">
         <div class="footer-brand">
           <div class="footer-logo-group">
-            <svg viewBox="0 0 32 32" fill="none" width="28" aria-hidden="true">
-              <polygon points="16,2 28,9 28,23 16,30 4,23 4,9" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
-              <circle cx="16" cy="16" r="4" fill="#C9A84C"/>
+            <svg viewBox="0 0 44 44" fill="none" width="30" aria-hidden="true">
+              <rect x="4" y="4" width="36" height="36" rx="10" fill="#050B1F"/>
+              <path d="M12 30L20 12L24 24L32 14" stroke="#F0CF72" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M13 31H31" stroke="#F0CF72" stroke-width="1.4" stroke-linecap="round" opacity="0.55"/>
+              <circle cx="32" cy="14" r="3.5" fill="#26B7C8"/>
             </svg>
             <span class="footer-logo-name">RusAndes Blockchain</span>
           </div>
@@ -470,9 +519,9 @@
           <div class="footer-nav-col">
             <h4>Contact</h4>
             <ul>
-              <li><a href="mailto:parrapenaandresfelipe13@gmail.com">Email Us</a></li>
-              <li><a href="https://wa.me/573116161398" target="_blank" rel="noopener noreferrer">WhatsApp (CO)</a></li>
-              <li><a href="tel:+17162499613">Call US Line</a></li>
+              <li><a href="mailto:RusAndiblockchain@gmail.com">Email Us</a></li>
+              <li><a href="https://wa.me/79961232427" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+              <li><a href="https://t.me/+17165443701" target="_blank" rel="noopener noreferrer">Telegram</a></li>
             </ul>
           </div>
         </nav>
@@ -480,7 +529,7 @@
 
       <div class="footer-disclaimer" id="disclaimer">
         <h4>Legal Disclaimer</h4>
-        <p><strong>Financial &amp; Markets Advisory:</strong> All content related to Global Markets, foreign exchange (FX), cryptocurrency, and digital assets is provided for <strong>informational and educational purposes only</strong> and does not constitute financial, investment, tax, or legal advice. Past performance of any financial instrument does not guarantee future results. Cryptocurrency and digital asset markets are highly volatile and involve substantial risk of loss, including the possible loss of all invested capital. RusAndes Blockchain provides advisory services only and is not a licensed broker, dealer, investment advisor, or financial planner under Colombian (SFC), US (SEC/FINRA), or any other jurisdiction's regulatory framework. Always consult a qualified financial professional before making any investment decision.</p>
+        <p><strong>Financial &amp; Markets Advisory:</strong> Global Markets content is provided for <strong>informational, educational, and advisory purposes</strong> and does not constitute legal or tax advice. RusAndes Blockchain provides consulting and guidance services and is not a licensed broker, dealer, investment advisor, or financial planner under Colombian (SFC), US (SEC/FINRA), or any other jurisdiction's regulatory framework. Clients remain responsible for their own financial decisions and should consult qualified professionals when needed.</p>
         <p><strong>Educational Services:</strong> Program availability, curricula, and institutional partnerships are subject to change without notice. Enrollment in language programs or university pathways does not guarantee admission, visa approval, or specific academic outcomes. Immigration and visa matters are the sole responsibility of the individual applicant.</p>
         <p><strong>Accommodation Services:</strong> Property pricing, availability, and specifications are subject to change. All bookings are governed by the terms and conditions provided at the time of reservation. Properties comply with applicable local regulations.</p>
         <p><strong>General:</strong> The information on this website is provided in good faith and for general informational purposes only. RusAndes Blockchain makes no representations or warranties of any kind regarding the accuracy, completeness, or suitability of any information on this site. Use of this website constitutes acceptance of these terms.</p>
