@@ -1,76 +1,151 @@
 /* ============================================================
-   PARTICLE CANVAS
+   HERO GLOBAL ROUTE CANVAS
 ============================================================ */
-(function initParticles() {
+(function initHeroRoutes() {
   const canvas = document.getElementById('particleCanvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
-  let particles = [];
   let animId;
+  let width = 0;
+  let height = 0;
+  let dpr = 1;
 
-  const CONFIG = {
-    count: 60,
-    maxDist: 140,
-    speed: 0.35,
-    radius: 1.8,
-    color: '201, 168, 76',
-  };
+  const nodes = [
+    { x: 0.12, y: 0.22, r: 4.2 },
+    { x: 0.28, y: 0.36, r: 3.2 },
+    { x: 0.46, y: 0.24, r: 4.8 },
+    { x: 0.66, y: 0.33, r: 3.5 },
+    { x: 0.84, y: 0.2, r: 4.4 },
+    { x: 0.74, y: 0.62, r: 3.2 },
+    { x: 0.5, y: 0.72, r: 4.2 },
+    { x: 0.24, y: 0.64, r: 3.6 },
+  ];
+
+  const routes = [
+    [0, 2, 0.12],
+    [2, 4, -0.15],
+    [1, 2, -0.18],
+    [2, 5, 0.22],
+    [7, 6, -0.14],
+    [6, 5, 0.12],
+    [3, 6, -0.2],
+    [0, 7, 0.18],
+  ];
 
   function resize() {
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    width = canvas.offsetWidth;
+    height = canvas.offsetHeight;
+    canvas.width = Math.floor(width * dpr);
+    canvas.height = Math.floor(height * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   }
 
-  function createParticles() {
-    particles = [];
-    for (let i = 0; i < CONFIG.count; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * CONFIG.speed,
-        vy: (Math.random() - 0.5) * CONFIG.speed,
-      });
-    }
+  function point(node) {
+    return { x: node.x * width, y: node.y * height };
+  }
+
+  function routeControl(a, b, bend) {
+    const midX = (a.x + b.x) / 2;
+    const midY = (a.y + b.y) / 2;
+    const dx = b.x - a.x;
+    const dy = b.y - a.y;
+    return {
+      x: midX - dy * bend,
+      y: midY + dx * bend,
+    };
+  }
+
+  function quadPoint(a, c, b, t) {
+    const mt = 1 - t;
+    return {
+      x: mt * mt * a.x + 2 * mt * t * c.x + t * t * b.x,
+      y: mt * mt * a.y + 2 * mt * t * c.y + t * t * b.y,
+    };
   }
 
   function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const time = performance.now() * 0.00012;
+    ctx.clearRect(0, 0, width, height);
 
-    // Update + draw connections
-    for (let i = 0; i < particles.length; i++) {
-      const p = particles[i];
-      p.x += p.vx;
-      p.y += p.vy;
+    const gridGradient = ctx.createLinearGradient(0, 0, width, height);
+    gridGradient.addColorStop(0, 'rgba(215,184,95,0.08)');
+    gridGradient.addColorStop(0.5, 'rgba(38,183,200,0.06)');
+    gridGradient.addColorStop(1, 'rgba(215,184,95,0.04)');
 
-      // Bounce
-      if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-      if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-
-      // Connections
-      for (let j = i + 1; j < particles.length; j++) {
-        const q = particles[j];
-        const dx = p.x - q.x;
-        const dy = p.y - q.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-
-        if (dist < CONFIG.maxDist) {
-          const alpha = (1 - dist / CONFIG.maxDist) * 0.25;
-          ctx.beginPath();
-          ctx.moveTo(p.x, p.y);
-          ctx.lineTo(q.x, q.y);
-          ctx.strokeStyle = `rgba(${CONFIG.color}, ${alpha})`;
-          ctx.lineWidth = 0.8;
-          ctx.stroke();
-        }
-      }
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = gridGradient;
+    for (let x = -80; x < width + 120; x += 120) {
+      ctx.beginPath();
+      ctx.moveTo(x + Math.sin(time * 8 + x) * 8, 0);
+      ctx.lineTo(x - 160, height);
+      ctx.stroke();
     }
 
-    // Draw dots after connections
-    for (const p of particles) {
+    for (const [start, end, bend] of routes) {
+      const a = point(nodes[start]);
+      const b = point(nodes[end]);
+      const c = routeControl(a, b, bend);
+
       ctx.beginPath();
-      ctx.arc(p.x, p.y, CONFIG.radius, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(${CONFIG.color}, 0.45)`;
+      ctx.moveTo(a.x, a.y);
+      ctx.quadraticCurveTo(c.x, c.y, b.x, b.y);
+      ctx.strokeStyle = 'rgba(255,255,255,0.13)';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(a.x, a.y);
+      ctx.quadraticCurveTo(c.x, c.y, b.x, b.y);
+      ctx.strokeStyle = 'rgba(215,184,95,0.18)';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      const t = (time * 0.9 + start * 0.13 + end * 0.07) % 1;
+      const pulse = quadPoint(a, c, b, t);
+      const glow = ctx.createRadialGradient(pulse.x, pulse.y, 0, pulse.x, pulse.y, 26);
+      glow.addColorStop(0, 'rgba(240,207,114,0.78)');
+      glow.addColorStop(0.5, 'rgba(38,183,200,0.32)');
+      glow.addColorStop(1, 'rgba(38,183,200,0)');
+      ctx.beginPath();
+      ctx.fillStyle = glow;
+      ctx.arc(pulse.x, pulse.y, 26, 0, Math.PI * 2);
       ctx.fill();
+    }
+
+    nodes.forEach((node, index) => {
+      const p = point(node);
+      const pulse = Math.sin(time * 16 + index) * 0.5 + 0.5;
+      const outer = node.r + 12 + pulse * 8;
+
+      ctx.beginPath();
+      ctx.strokeStyle = `rgba(38,183,200,${0.12 + pulse * 0.12})`;
+      ctx.lineWidth = 1;
+      ctx.arc(p.x, p.y, outer, 0, Math.PI * 2);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.fillStyle = 'rgba(255,255,255,0.92)';
+      ctx.arc(p.x, p.y, node.r + 1, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.fillStyle = 'rgba(215,184,95,0.9)';
+      ctx.arc(p.x, p.y, node.r, 0, Math.PI * 2);
+      ctx.fill();
+    });
+
+    const horizon = ctx.createLinearGradient(0, height * 0.42, width, height * 0.42);
+    horizon.addColorStop(0, 'rgba(215,184,95,0)');
+    horizon.addColorStop(0.5, 'rgba(255,255,255,0.16)');
+    horizon.addColorStop(1, 'rgba(38,183,200,0)');
+    ctx.strokeStyle = horizon;
+    ctx.lineWidth = 1;
+    for (let i = 0; i < 3; i++) {
+      ctx.beginPath();
+      ctx.moveTo(width * 0.12, height * (0.34 + i * 0.065));
+      ctx.bezierCurveTo(width * 0.34, height * (0.25 + i * 0.02), width * 0.66, height * (0.48 - i * 0.02), width * 0.88, height * (0.36 + i * 0.065));
+      ctx.stroke();
     }
 
     animId = requestAnimationFrame(draw);
@@ -78,7 +153,6 @@
 
   function start() {
     resize();
-    createParticles();
     cancelAnimationFrame(animId);
     draw();
   }
