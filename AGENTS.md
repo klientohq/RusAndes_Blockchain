@@ -21,6 +21,9 @@ No build tools. No frameworks. Edit files directly, verify locally, then commit 
 ├── assets/
 │   ├── ceo-photo.jpg
 │   └── PHOTO_INSTRUCTIONS.txt
+├── logo ideas/
+│   ├── RusAndes logo one.png
+│   └── RusAndes logo two.png
 ├── AGENTS.md           ← Codex site-editing instructions
 ├── CLAUDE.md           ← Claude site-editing instructions
 ├── .claude/
@@ -95,6 +98,9 @@ Full privacy policy is in `privacy.html`. Full terms are in `terms.html`.
 Drop `ceo-photo.jpg` into the `assets/` folder. Done — no code change needed.
 See `assets/PHOTO_INSTRUCTIONS.txt` for specs.
 
+### Logo concepts
+Logo concept files live in `logo ideas/`. Keep final production logo files in `assets/` only after one direction is selected and optimized for the website.
+
 ### Update Formspree form ID
 In `index.html`, search for `formspree.io/f/` — replace the ID after the last `/`.
 Current ID: `mvzyjqlg`
@@ -151,4 +157,4 @@ npx serve -p 3456 .
 ```
 Then open http://localhost:3456
 
-Or use the Codex preview: launch config is in `.Codex/launch.json`.
+Or use the Codex preview: launch config is in `.claude/launch.json`.
