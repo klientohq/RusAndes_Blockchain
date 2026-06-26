@@ -191,9 +191,10 @@
    MOBILE MENU
 ============================================================ */
 (function initMobileMenu() {
+  const navbar = document.getElementById('navbar');
   const btn = document.getElementById('hamburger');
   const links = document.getElementById('navLinks');
-  if (!btn || !links) return;
+  if (!navbar || !btn || !links) return;
 
   btn.addEventListener('click', () => {
     const open = links.classList.toggle('open');

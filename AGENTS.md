@@ -151,4 +151,4 @@ npx serve -p 3456 .
 ```
 Then open http://localhost:3456
 
-Or use the Claude Code preview: launch config is in `.claude/launch.json`.
+Or use the Codex preview: launch config is in `.Codex/launch.json`.
