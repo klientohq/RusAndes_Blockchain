@@ -4,7 +4,7 @@
     {
       "name": "rusandes",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "-p", "3456", "."],
+      "runtimeArgs": ["serve", "-p", "3456", "RusAndes Raw Website"],
       "port": 3456
     }
   ]

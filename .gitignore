@@ -22,3 +22,7 @@ Thumbs.db
 
 # Claude Code local settings (machine-specific)
 .claude/settings.local.json
+
+# Private company brain — handed to the owner separately.
+# This repo is PUBLIC: never commit the strategy skill here.
+RusAndes-brain-for-Andres/
