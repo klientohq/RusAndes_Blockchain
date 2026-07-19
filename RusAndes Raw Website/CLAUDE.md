@@ -3,158 +3,213 @@
 Static single-page website for RusAndes Blockchain, hosted on GitHub Pages.
 No build tools. No frameworks. Edit files directly, verify locally, then commit and push to deploy.
 
----
-
-## File Structure
-
-```
-@# parra website/
-├── index.html          ← Main page (all sections)
-├── privacy.html        ← Privacy policy page
-├── terms.html          ← Terms of use page
-├── 404.html            ← Custom 404 error page
-├── css/
-│   ├── style.css       ← All styles + design system variables
-│   └── legal.css       ← Styles shared by privacy.html and terms.html
-├── js/
-│   └── main.js         ← All JavaScript (particles, scroll, mobile menu, form)
-├── assets/
-│   ├── ceo-photo.jpg
-│   └── PHOTO_INSTRUCTIONS.txt
-├── logo ideas/
-│   ├── RusAndes logo one.png
-│   └── RusAndes logo two.png
-├── AGENTS.md           ← Codex site-editing instructions
-├── CLAUDE.md           ← Claude site-editing instructions
-├── .claude/
-│   └── launch.json     ← Local preview launch config
-├── .nojekyll           ← Required for GitHub Pages (do not delete)
-└── .gitignore
-```
+Live: **https://rusandes.com** · Repo: `klientohq/RusAndes_Blockchain` (public)
 
 ---
 
-## Design System (css/style.css — top of file)
+## ⚠️ Read this before you touch anything
 
-All colors and fonts are CSS custom properties. Change once, applies everywhere:
+**The site files live in the `RusAndes Raw Website/` subfolder, NOT at the repo root.**
+
+Branch-based GitHub Pages can only publish `/` or `/docs` — it cannot publish an arbitrary
+subfolder. So this repo publishes through a **GitHub Actions workflow**
+(`.github/workflows/deploy-pages.yml`) that uploads `RusAndes Raw Website/` as the site root.
+
+Consequences you must respect:
+
+1. **The folder name `RusAndes Raw Website` is load-bearing — it is hardcoded in the workflow.**
+   If you rename or move the folder, update the `path:` value in
+   `.github/workflows/deploy-pages.yml` in the same commit, or the site deploys empty.
+2. **`index.html` and `CNAME` must stay at the top level of that folder** — it becomes the site root.
+3. Because the folder is the site root, all links inside the site stay **relative**
+   (`css/style.css`, not `/RusAndes Raw Website/css/style.css`).
+4. **This repo is public.** Never commit secrets, tokens, or the private company-brain skill.
+   `RusAndes-brain-for-Andres/` is gitignored for exactly this reason.
+
+---
+
+## Repository layout
+
+```
+<repo root>/
+├── .github/workflows/deploy-pages.yml   ← publishes the folder below (do not break)
+├── .claude/launch.json                  ← local preview config
+├── .gitignore
+└── RusAndes Raw Website/                ← THIS FOLDER IS THE PUBLISHED SITE ROOT
+    ├── index.html          ← Main page (all sections)
+    ├── privacy.html        ← Privacy policy page
+    ├── terms.html          ← Terms of use page
+    ├── 404.html            ← Custom 404 page
+    ├── css/
+    │   ├── style.css       ← All styles + design system variables
+    │   └── legal.css       ← Styles for privacy.html + terms.html
+    ├── js/main.js          ← All JS (particles, scroll, mobile menu, form)
+    ├── assets/             ← ceo-photo.jpg, PHOTO_INSTRUCTIONS.txt
+    ├── logo ideas/         ← Two logo concept PNGs (not final production logo)
+    ├── CNAME               ← "rusandes.com" — do NOT delete
+    ├── .nojekyll           ← do NOT delete
+    ├── robots.txt, sitemap.xml
+    ├── CLAUDE.md / AGENTS.md / HANDOFF.md
+```
+
+---
+
+## Design System (`css/style.css` — `:root`, top of file)
+
+The site uses a **light theme with a dark hero panel**. All colors are CSS custom
+properties — change once, applies everywhere. Never hardcode a hex in a rule; use the variable.
 
 ```css
---gold: #c9a84c          /* Primary gold accent */
---gold-light: #e8c97a    /* Hover/highlight gold */
---bg-0: #05081a          /* Darkest background */
---bg-1: #0a0e26          /* Secondary background */
---bg-card: #111827       /* Card backgrounds */
---text-0: #f0f4ff        /* Primary text */
---text-2: #8b95b0        /* Secondary/muted text */
---font-display: 'Cormorant Garamond'  /* All headings */
---font-body: 'Inter'                  /* All body text */
+/* Surfaces (light) */
+--bg-0: #F7F9FB;    --bg-1: #EEF3F5;
+--bg-2: #E3EAED;    --bg-card: #FFFFFF;
+
+/* Gold accent */
+--gold: #D7B85F;         --gold-light: #F0CF72;    --gold-dark: #9E7F29;
+--gold-subtle: rgba(215,184,95,0.1);
+--gold-border: rgba(215,184,95,0.34);   --gold-border-hover: rgba(215,184,95,0.72);
+
+/* Teal secondary */
+--teal: #26B7C8;    --teal-dark: #0C7489;    --teal-subtle: rgba(38,183,200,0.1);
+
+/* Text (dark on light) */
+--text-0: #142033;  --text-1: #334257;  --text-2: #647184;  --text-3: #8C98A8;
+
+/* Borders */
+--border: rgba(20,32,51,0.09);   --border-strong: rgba(20,32,51,0.16);
+
+/* Hero dark panel — intentionally stays dark on the light page */
+--panel-bg: #050B1F;   --panel-bg2: #0A1730;
+--panel-text: #F0F4FF; --panel-text2: #8B95B0;
+
+/* Type */
+--font-display: 'Cormorant Garamond', Georgia, serif;   /* headings */
+--font-body: 'Inter', system-ui, sans-serif;            /* body */
+
+/* Also available: --radius-sm/md/lg/xl, --shadow-sm/md/lg/gold, --ease, --ease-out */
 ```
+
+> If you are writing text that sits on the hero, use `--panel-text` / `--panel-text2`,
+> not `--text-0` — the hero is dark and normal text colors will be unreadable there.
 
 ---
 
-## Section Map — index.html
+## Section Map — `index.html` (663 lines)
 
-| Section | HTML id / class | Approx line |
+| Section | Selector | Line |
 |---|---|---|
-| `<head>` meta + fonts | `<head>` | 1–20 |
-| Navigation | `<nav class="navbar">` | ~22 |
-| Hero | `<section id="home">` | ~55 |
-| Stats bar | `<div class="stats-bar">` | ~115 |
-| Three Divisions | `<section id="divisions">` | ~140 |
-| Flywheel model | `<section class="flywheel-section">` | ~228 |
-| Strategy / SWOT | `<section id="strategy">` | ~265 |
-| About / CEO | `<section id="about">` | ~355 |
-| Values | `<section id="values">` | ~420 |
-| Contact | `<section id="contact">` | ~485 |
-| Footer + Disclaimer | `<footer class="footer">` | ~575 |
-| Scroll-to-top button | `<button class="scroll-top">` | ~640 |
+| Navigation | `<nav class="navbar" id="navbar">` | 47 |
+| Hero | `<section id="home" class="hero">` | 88 |
+| Stats bar | `<div class="stats-bar">` | 131 |
+| Three Divisions | `<section id="divisions">` | 158 |
+| Flywheel model | `<section class="flywheel-section">` | 247 |
+| Strategy / SWOT | `<section id="strategy">` | 289 |
+| About / CEO | `<section id="about">` | 374 |
+| Values | `<section id="values">` | 438 |
+| Contact | `<section id="contact">` | 487 |
+| Footer | `<footer class="footer">` | 589 |
+| Footer nav | `<nav class="footer-nav">` | 605 |
+| Legal disclaimer | `<div class="footer-disclaimer" id="disclaimer">` | 635 |
+| Scroll-to-top | `<button class="scroll-top" id="scrollTop">` | 657 |
+
+Line numbers drift as you edit — search by selector, don't trust the number blindly.
 
 ---
 
 ## Common Edits
 
 ### Update phone numbers or email
-Search `index.html` for the phone number or email and change both the `href` and the display text.
-Phones appear in two places: the contact section and can optionally be in the footer.
+Search `index.html` for the number/email and change **both** the `href` and the display text.
+Contact links currently in use: `mailto:RusAndiblockchain@gmail.com`, `wa.me/79961232427`,
+`t.me/+17165443701`.
 
-### Add a new service or bullet point to a division card
-Find the card in `index.html` by searching for the division title (e.g. "Global Markets").
-Add an `<li>` item inside the `<ul class="card-list">` of that card.
+### Add a service/bullet to a division card
+Find the card by its title (e.g. "Global Markets"), add an `<li>` inside that card's `<ul class="card-list">`.
 
 ### Change hero tagline
-Search `index.html` for `hero-description` — it's the paragraph just below the "International Services Group" line.
+Search for `hero-description` — the paragraph under "International Services Group".
 
 ### Add a new section
-1. Add the HTML block in `index.html` between existing sections.
-2. Add a `<li>` link for it in the `<ul class="nav-links">` navbar.
-3. Style it in `css/style.css` — follow the pattern of existing sections (`.divisions`, `.values`, etc.).
-4. Give the section an `id=""` so the nav link can anchor to it.
+1. Add the HTML block in `index.html` between existing sections, with an `id=""`.
+2. Add a link in `<ul class="nav-links">` (navbar) and consider the footer nav too.
+3. Style it in `css/style.css` following existing section patterns (`.divisions`, `.values`).
 
 ### Update the legal disclaimer
-The full disclaimer is in `<div class="footer-disclaimer">` near the bottom of `index.html`.
-Full privacy policy is in `privacy.html`. Full terms are in `terms.html`.
+`<div class="footer-disclaimer" id="disclaimer">` near the bottom of `index.html`.
+Full policies live in `privacy.html` and `terms.html`.
 
-### Add CEO photo
-Drop `ceo-photo.jpg` into the `assets/` folder. Done — no code change needed.
-See `assets/PHOTO_INSTRUCTIONS.txt` for specs.
+### Add/replace the CEO photo
+Drop `ceo-photo.jpg` into `assets/`. No code change needed. Specs in `assets/PHOTO_INSTRUCTIONS.txt`.
+
+### Update the Formspree form ID
+Search `index.html` for `formspree.io/f/` and replace the ID after the last `/`.
+Current ID: `mvzyjqlg`. To route submissions to a different inbox, create a form under the new
+owner's Formspree account and swap this ID.
 
 ### Logo concepts
-Logo concept files live in `logo ideas/`. Keep final production logo files in `assets/` only after one direction is selected and optimized for the website.
-
-### Update Formspree form ID
-In `index.html`, search for `formspree.io/f/` — replace the ID after the last `/`.
-Current ID: `mvzyjqlg`
+Concepts live in `logo ideas/`. Move a final, web-optimized logo into `assets/` only once a
+direction is chosen.
 
 ---
 
-## Contact Info (current)
+## Contact Info (current, as published)
 
 | Field | Value |
 |---|---|
-| Email | RusAndiblockchain@gmail.com |
-| WhatsApp | +7 996 1232427 |
-| Telegram | +1 7165443701 |
-| WhatsApp link | https://wa.me/79961232427 |
-| Telegram link | https://t.me/+17165443701 |
-| HQ | Bogotá D.C., Colombia |
 | CEO | Andres Felipe Parra Peña |
+| HQ | Bogotá D.C., Colombia |
+| Email | RusAndiblockchain@gmail.com |
+| WhatsApp | +7 996 1232427 · https://wa.me/79961232427 |
+| Telegram | +1 716 544 3701 · https://t.me/+17165443701 |
 
 ---
 
-## GitHub Pages Deployment
-
-Current repo:
-
-- GitHub repo: `git@github.com:klientohq/RusAndes_Blockchain.git`
-- Branch: `main`
-- Live site: `https://klientohq.github.io/RusAndes_Blockchain/`
-
-Do not push automatically unless the user explicitly says to deploy.
-
-Deploy flow:
+## Local Preview (always do this before deploying)
 
 ```bash
-cd "/Users/camilorivas/Documents/AI/@# parra website"
-git status --short --branch
-git add .
+# from the repo root:
+npx serve -p 3456 "RusAndes Raw Website"
+# open http://localhost:3456
+```
+
+Or use the Claude Code preview — launch config is in `.claude/launch.json` (already points
+at the subfolder).
+
+Check both **desktop ~1280px** and **mobile ~390px**, and confirm no horizontal overflow.
+
+---
+
+## Deployment
+
+**A push to `main` publishes the site publicly.** There is no staging environment.
+Do not push unless the owner explicitly says to deploy.
+
+```bash
+git status                 # confirm you're only shipping what you intend
+git add -A
 git commit -m "describe what changed"
-git push origin main
+git push origin main       # ← this publishes it live
 ```
 
-GitHub Pages auto-updates after the push, usually within about a minute. Verify after deploy:
+The Actions workflow builds and deploys in roughly 15–60 seconds.
+
+Verify after deploying:
 
 ```bash
-curl -I -L https://klientohq.github.io/RusAndes_Blockchain/
+gh run watch $(gh run list --limit 1 --json databaseId -q '.[0].databaseId') --exit-status
+curl -sI -L https://rusandes.com | head -1     # expect HTTP/2 200
 ```
+
+Then hard-refresh in a browser (Cmd/Ctrl+Shift+R).
+
+If a deploy fails, `gh run view --log-failed` shows why. The site keeps serving the last
+successful deployment, so a failed build does not take the site down.
 
 ---
 
-## Local Preview
+## Pages configuration (don't change casually)
 
-```bash
-cd "/Users/camilorivas/Documents/AI/@# parra website"
-npx serve -p 3456 .
-```
-Then open http://localhost:3456
-
-Or use the Claude Code preview: launch config is in `.claude/launch.json`.
+- Build type: **`workflow`** (GitHub Actions). If this is ever flipped back to "Deploy from a
+  branch", the site breaks, because there is no `index.html` at the repo root.
+- Custom domain: `rusandes.com`, HTTPS enforced, cert covers apex + `www`.
+- DNS lives at GoDaddy: four `A` records to GitHub Pages IPs, plus `CNAME www → klientohq.github.io.`

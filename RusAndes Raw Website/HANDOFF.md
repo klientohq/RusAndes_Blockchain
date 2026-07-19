@@ -22,27 +22,37 @@ The site has these sections (all in `index.html`): Home/Hero, Stats bar, Three D
 
 ## 2. Repo layout (what you get when you clone)
 
+**The website files are in the `RusAndes Raw Website/` subfolder, not at the repo root.**
+
 ```
-index.html          ← the whole main page, all sections
-privacy.html        ← privacy policy
-terms.html          ← terms of use
-404.html            ← custom not-found page
-css/style.css       ← all styles + the design-system color/font variables (top of file)
-css/legal.css       ← styles for privacy.html + terms.html
-js/main.js          ← all JS (particles, scroll, mobile menu, contact form)
-assets/             ← ceo-photo.jpg and image assets
-logo ideas/         ← two logo concept PNGs (not yet the final production logo)
-CNAME               ← contains "rusandes.com" — tells GitHub Pages the custom domain (do NOT delete)
-.nojekyll           ← required so GitHub Pages serves files as-is (do NOT delete)
-robots.txt, sitemap.xml   ← SEO/indexing
-CLAUDE.md           ← detailed site-editing guide (section map, common edits) — READ THIS for edits
-AGENTS.md           ← same guide, for Codex
-HANDOFF.md          ← this file
+<repo root>/
+├── .github/workflows/deploy-pages.yml  ← publishes the folder below (see §5)
+├── .claude/launch.json                 ← local preview config
+├── CLAUDE.md                           ← root pointer: explains this layout
+├── .gitignore
+└── RusAndes Raw Website/               ← THIS FOLDER IS THE PUBLISHED SITE ROOT
+    ├── index.html          ← the whole main page, all sections
+    ├── privacy.html        ← privacy policy
+    ├── terms.html          ← terms of use
+    ├── 404.html            ← custom not-found page
+    ├── css/style.css       ← all styles + design-system color/font variables (top of file)
+    ├── css/legal.css       ← styles for privacy.html + terms.html
+    ├── js/main.js          ← all JS (particles, scroll, mobile menu, contact form)
+    ├── assets/             ← ceo-photo.jpg and image assets
+    ├── logo ideas/         ← two logo concept PNGs (not yet the final production logo)
+    ├── CNAME               ← "rusandes.com" — tells Pages the custom domain (do NOT delete)
+    ├── .nojekyll           ← serves files as-is (do NOT delete)
+    ├── robots.txt, sitemap.xml   ← SEO/indexing
+    ├── CLAUDE.md           ← detailed site-editing guide — READ THIS for edits
+    ├── AGENTS.md           ← same guide, for Codex
+    └── HANDOFF.md          ← this file
 ```
 
 **Detailed editing instructions (where each section lives, how to change phones/email/copy, the color system) are in [`CLAUDE.md`](CLAUDE.md).** This handoff covers ownership, access, and deployment; `CLAUDE.md` covers day-to-day edits.
 
-> Note: `CLAUDE.md` still references an old local folder name (`@# parra website`). That's cosmetic — ignore the folder name; the file/section map is accurate.
+> ⚠️ The folder name `RusAndes Raw Website` is hardcoded in the deploy workflow. If you rename or
+> move it, update `path:` in `.github/workflows/deploy-pages.yml` in the same commit, or the site
+> will deploy empty.
 
 ---
 
@@ -67,8 +77,8 @@ cd RusAndes_Blockchain
 ## 4. Preview locally before you deploy
 
 ```bash
-# from inside the repo folder:
-npx serve -p 3456 .
+# from the repo root — note the folder argument:
+npx serve -p 3456 "RusAndes Raw Website"
 # then open http://localhost:3456
 ```
 
@@ -78,20 +88,31 @@ Always look at the site locally (and check mobile width ~390px and desktop ~1280
 
 ## 5. Deploy = commit + push (that's the whole pipeline)
 
-GitHub Pages redeploys automatically within ~1 minute of a push to `main`. There is no separate build/deploy step.
+A push to `main` triggers the GitHub Actions workflow `.github/workflows/deploy-pages.yml`,
+which uploads the `RusAndes Raw Website/` folder as the site root and publishes it — typically
+in 15–60 seconds. You never run a build yourself.
 
 ```bash
 git status                       # see what changed
-git add .
+git add -A
 git commit -m "describe what changed"
 git push origin main             # ← this publishes it live
 ```
 
 Verify it went live:
 ```bash
-curl -I -L https://rusandes.com
+gh run watch $(gh run list --limit 1 --json databaseId -q '.[0].databaseId') --exit-status
+curl -sI -L https://rusandes.com | head -1        # expect HTTP/2 200
 ```
 Then hard-refresh the site in a browser (Cmd/Ctrl+Shift+R).
+
+If the workflow fails, `gh run view --log-failed` shows why. A failed build does **not** take the
+site down — Pages keeps serving the last successful deployment.
+
+> **Why Actions instead of the simple branch deploy?** Branch-based Pages can only publish the
+> repo root (`/`) or `/docs`. The site lives in `RusAndes Raw Website/`, so it needs a workflow.
+> Do not switch Pages back to "Deploy from a branch" — there is no `index.html` at the repo root,
+> so the site would 404.
 
 **Rule of thumb:** edit → preview locally → commit → push. Nothing is live until you `git push`.
 
@@ -110,7 +131,15 @@ CNAME www  klientohq.github.io.
 ```
 GoDaddy nameservers stay `ns37.domaincontrol.com` / `ns38.domaincontrol.com`.
 
-In the repo's **Settings → Pages**: custom domain is `rusandes.com`, and **Enforce HTTPS** should be ON (enable it once GitHub finishes provisioning the certificate). The domain and DNS stay as-is — nothing to change on GoDaddy.
+In the repo's **Settings → Pages** (all of this is already configured and verified live):
+
+| Setting | Value |
+|---|---|
+| Source / build type | **GitHub Actions** (not "Deploy from a branch") |
+| Custom domain | `rusandes.com` |
+| Enforce HTTPS | ON — certificate covers `rusandes.com` and `www.rusandes.com` |
+
+The domain and DNS stay as-is — nothing to change on GoDaddy.
 
 ---
 
@@ -154,12 +183,17 @@ The contact form submits to **Formspree**. The form ID is in `index.html` — se
 
 ## 10. The company brain (delivered separately)
 
-The deep strategic knowledge about RusAndes — the three divisions, positioning, regulatory notes, competitor intel, SWOT, 90-day priorities — lives in a **Claude/Codex "skill"** that makes your AI a fully-briefed co-founder for this company. Because this repo is public, that skill is **NOT stored here**. It is handed to you privately as a folder.
+You are handed **two Claude/Codex "skills"** privately, as a folder. Because this repo is public, neither is stored here.
 
-To install it (once you receive the `rusandes-2brain-handoff` folder):
-1. Copy the `rusandes-2brain` folder into `~/.claude/skills/` on your machine.
-2. Open Claude Code in this project and it will auto-load whenever you mention RusAndes.
-3. See the `INSTALL.md` inside that folder for exact steps.
+| Skill | What it knows |
+|---|---|
+| `rusandes-2brain` | Company strategy — the three divisions, positioning, regulatory notes, competitor intel, SWOT, 90-day priorities. Makes your AI a briefed co-founder. |
+| `rusandes-website` | How to edit and publish this website — repo layout, the subfolder/workflow rule, design tokens, section map, preview + deploy + verify. |
+
+To install (once you receive the handoff folder):
+1. Copy **both** skill folders into `~/.claude/skills/` on your machine.
+2. Restart Claude Code. They auto-load when you open this project or mention RusAndes.
+3. See `INSTALL.md` inside that folder for exact steps.
 
 ---
 
