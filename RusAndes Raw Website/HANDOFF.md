@@ -16,7 +16,7 @@
   - GitHub Pages fallback: `https://klientohq.github.io/RusAndes_Blockchain/`
 - **Repo:** `https://github.com/klientohq/RusAndes_Blockchain`
 
-The site has these sections (all in `index.html`): Home/Hero, Stats bar, Three Divisions, Flywheel model, Strategy/SWOT, About/CEO, Values, Contact, Footer + legal disclaimer. Plus standalone `privacy.html`, `terms.html`, and `404.html`.
+The site has these sections (all in `index.html`): Home/Hero, Stats bar, Three Divisions, Flywheel model, About/CEO, Values, Contact, Footer + legal disclaimer. Plus standalone `privacy.html`, `terms.html`, and `404.html`.
 
 ---
 
