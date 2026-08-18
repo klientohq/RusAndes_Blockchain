@@ -101,7 +101,7 @@ properties — change once, applies everywhere. Never hardcode a hex in a rule; 
 | Navigation | `<nav class="navbar" id="navbar">` | 47 |
 | Hero | `<section id="home" class="hero">` | 88 |
 | Stats bar | `<div class="stats-bar">` | 131 |
-| Three Divisions | `<section id="divisions">` | 158 |
+| Four Divisions | `<section id="divisions">` | 158 |
 | Flywheel model | `<section class="flywheel-section">` | 247 |
 | About / CEO | `<section id="about">` | 374 |
 | Values | `<section id="values">` | 438 |

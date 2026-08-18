@@ -16,7 +16,7 @@
   - GitHub Pages fallback: `https://klientohq.github.io/RusAndes_Blockchain/`
 - **Repo:** `https://github.com/klientohq/RusAndes_Blockchain`
 
-The site has these sections (all in `index.html`): Home/Hero, Stats bar, Three Divisions, Flywheel model, About/CEO, Values, Contact, Footer + legal disclaimer. Plus standalone `privacy.html`, `terms.html`, and `404.html`.
+The site has these sections (all in `index.html`): Home/Hero, Stats bar, Four Divisions, International Mobility model, About/CEO, Values, Contact, Footer + legal disclaimer. Plus standalone `privacy.html`, `terms.html`, and `404.html`.
 
 ---
 
@@ -187,7 +187,7 @@ You are handed **two Claude/Codex "skills"** privately, as a folder. Because thi
 
 | Skill | What it knows |
 |---|---|
-| `rusandes-2brain` | Company strategy — the three divisions, positioning, regulatory notes, competitor intel, SWOT, 90-day priorities. Makes your AI a briefed co-founder. |
+| `rusandes-2brain` | Company strategy — the four divisions, positioning, regulatory notes, competitor intel, SWOT, 90-day priorities. Makes your AI a briefed co-founder. |
 | `rusandes-website` | How to edit and publish this website — repo layout, the subfolder/workflow rule, design tokens, section map, preview + deploy + verify. |
 
 To install (once you receive the handoff folder):
