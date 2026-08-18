@@ -150,7 +150,10 @@ button { cursor: pointer; font: inherit; border: none; background: none; }
 }
 .nav-cta:hover { background: var(--teal-dark); color: #fff; border-color: var(--teal-dark); transform: translateY(-1px); }
 
-.hamburger { display: none; flex-direction: column; gap: 5px; padding: 6px; }
+.hamburger {
+  display: none; flex-direction: column; align-items: center; justify-content: center;
+  gap: 5px; width: 44px; height: 44px; padding: 6px;
+}
 .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--text-0); transition: var(--transition); transform-origin: center; }
 .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
@@ -338,7 +341,7 @@ button { cursor: pointer; font: inherit; border: none; background: none; }
 ============================================================ */
 .divisions { padding: 100px 0; background: var(--bg-0); }
 
-.divisions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.divisions-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 
 .division-card {
   background: var(--bg-card); border: 1px solid var(--border);
@@ -372,7 +375,7 @@ button { cursor: pointer; font: inherit; border: none; background: none; }
 
 .card-tag {
   font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 20px; display: block;
+  color: var(--gold-dark); margin-bottom: 20px; display: block;
 }
 
 .card-desc { font-size: 15px; color: var(--text-2); line-height: 1.75; margin-bottom: 18px; }
@@ -401,7 +404,7 @@ button { cursor: pointer; font: inherit; border: none; background: none; }
 }
 
 .card-link {
-  font-size: 14px; font-weight: 600; color: var(--gold);
+  font-size: 14px; font-weight: 600; color: var(--gold-dark);
   letter-spacing: 0.03em; display: inline-flex; align-items: center; gap: 6px;
   transition: gap var(--transition), color var(--transition);
   margin-top: auto;
@@ -1036,7 +1039,7 @@ a.ci-value:hover { color: var(--gold); }
   .about-grid { grid-template-columns: 1fr; }
   .about-visual { height: 420px; min-height: 420px; }
   .about-text { padding: 0; }
-  .divisions-grid { grid-template-columns: 1fr; max-width: 620px; margin: 0 auto; }
+  .divisions-grid { max-width: 980px; margin: 0 auto; }
   .service-matrix { grid-template-columns: 1fr; }
   .values-grid { grid-template-columns: repeat(3, 1fr); }
   .platform-map { grid-template-columns: 1fr; max-width: 620px; margin: 0 auto; padding-top: 128px; }
@@ -1072,6 +1075,7 @@ a.ci-value:hover { color: var(--gold); }
   .form-row { grid-template-columns: 1fr; }
   .contact-form-wrap { padding: 24px; }
   .values-grid { grid-template-columns: repeat(2, 1fr); }
+  .divisions-grid { grid-template-columns: 1fr; max-width: 620px; }
   .platform-map { padding-top: 150px; }
   .platform-core { padding: 20px 22px; }
   .platform-lane { min-height: 0; padding: 28px 22px 26px; }
