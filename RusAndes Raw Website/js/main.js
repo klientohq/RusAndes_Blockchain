@@ -9,6 +9,7 @@
   let width = 0;
   let height = 0;
   let dpr = 1;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const nodes = [
     { x: 0.12, y: 0.22, r: 4.2 },
@@ -148,7 +149,7 @@
       ctx.stroke();
     }
 
-    animId = requestAnimationFrame(draw);
+    if (!reduceMotion) animId = requestAnimationFrame(draw);
   }
 
   function start() {
@@ -168,7 +169,7 @@
   // Pause when tab is hidden
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) cancelAnimationFrame(animId);
-    else draw();
+    else if (!reduceMotion) draw();
   });
 })();
 
@@ -195,31 +196,52 @@
   const btn = document.getElementById('hamburger');
   const links = document.getElementById('navLinks');
   if (!navbar || !btn || !links) return;
+  const isSpanish = document.documentElement.lang === 'es';
+  const openLabel = isSpanish ? 'Abrir menú' : 'Open menu';
+  const closeLabel = isSpanish ? 'Cerrar menú' : 'Close menu';
+
+  function closeMenu({ returnFocus = false } = {}) {
+    links.classList.remove('open');
+    btn.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', openLabel);
+    document.body.style.overflow = '';
+    if (returnFocus) btn.focus();
+  }
 
   btn.addEventListener('click', () => {
     const open = links.classList.toggle('open');
     btn.classList.toggle('open', open);
     btn.setAttribute('aria-expanded', open);
+    btn.setAttribute('aria-label', open ? closeLabel : openLabel);
     document.body.style.overflow = open ? 'hidden' : '';
+    if (open && window.matchMedia('(max-width: 768px)').matches) {
+      links.querySelector('a')?.focus();
+    }
   });
 
   // Close on link click
   links.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      links.classList.remove('open');
-      btn.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    });
+    link.addEventListener('click', () => closeMenu());
   });
 
   // Close on outside click
   document.addEventListener('click', (e) => {
-    if (!navbar.contains(e.target)) {
-      links.classList.remove('open');
-      btn.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
+    if (!navbar.contains(e.target)) closeMenu();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && links.classList.contains('open')) closeMenu({ returnFocus: true });
+    if (e.key !== 'Tab' || !links.classList.contains('open') || !window.matchMedia('(max-width: 768px)').matches) return;
+    const focusable = [btn, ...links.querySelectorAll('a')];
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
     }
   });
 })();
@@ -289,48 +311,42 @@
   const success = document.getElementById('formSuccess');
   if (!form) return;
 
-  form.addEventListener('submit', async (e) => {
-    const action = form.action;
-
-    // If Formspree ID is not set, show a demo success message
-    if (!action || action.includes('YOUR_FORM_ID')) {
-      e.preventDefault();
-      if (success) {
-        success.hidden = false;
-        form.querySelectorAll('input, select, textarea').forEach(el => el.value = '');
-        setTimeout(() => { success.hidden = true; }, 5000);
-      }
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
       return;
     }
 
-    // Real Formspree submission
-    e.preventDefault();
-    const btn = form.querySelector('button[type="submit"]');
-    const original = btn.textContent;
-    btn.disabled = true;
-    btn.textContent = 'Sending…';
+    const data = new FormData(form);
+    const isSpanish = form.dataset.formLanguage !== 'en';
+    const labels = isSpanish ? {
+      heading: 'Hola, quiero información de RusAndes.',
+      name: 'Nombre', email: 'Correo', service: 'Servicio', level: 'Nivel académico',
+      residence: 'País de residencia', nationality: 'Nacionalidad', destination: 'Destino',
+      program: 'Programa', message: 'Mensaje', source: 'Página'
+    } : {
+      heading: 'Hello, I would like information from RusAndes.',
+      name: 'Name', email: 'Email', service: 'Service', level: 'Academic level',
+      residence: 'Country of residence', nationality: 'Nationality', destination: 'Destination',
+      program: 'Program', message: 'Message', source: 'Page'
+    };
+    const fields = [
+      ['name', labels.name], ['email', labels.email], ['service', labels.service],
+      ['academic_level', labels.level], ['residence', labels.residence],
+      ['nationality', labels.nationality], ['destination', labels.destination],
+      ['program', labels.program], ['message', labels.message], ['source_page', labels.source]
+    ];
+    const lines = [labels.heading];
+    fields.forEach(([key, label]) => {
+      const value = String(data.get(key) || '').trim();
+      if (value) lines.push(`${label}: ${value}`);
+    });
 
-    try {
-      const res = await fetch(action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { Accept: 'application/json' },
-      });
-
-      if (res.ok) {
-        if (success) success.hidden = false;
-        form.reset();
-        setTimeout(() => { if (success) success.hidden = true; }, 5000);
-      } else {
-        btn.textContent = 'Error — try emailing directly';
-      }
-    } catch {
-      btn.textContent = 'Error — try emailing directly';
-    } finally {
-      setTimeout(() => {
-        btn.disabled = false;
-        if (btn.textContent !== original) btn.textContent = original;
-      }, 3000);
-    }
+    const whatsappUrl = `https://wa.me/79961232427?text=${encodeURIComponent(lines.join('\n'))}`;
+    const opened = window.open(whatsappUrl, '_blank');
+    if (opened) opened.opener = null;
+    else window.location.assign(whatsappUrl);
+    if (success) success.hidden = false;
   });
 })();

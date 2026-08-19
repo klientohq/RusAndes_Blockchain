@@ -1,6 +1,6 @@
 # RusAndes Blockchain — Site Editing Guide
 
-Static single-page website for RusAndes Blockchain, hosted on GitHub Pages.
+Static multi-page website for RusAndes Blockchain, hosted on GitHub Pages.
 No build tools. No frameworks. Edit files directly, verify locally, then commit and push to deploy.
 
 Live: **https://rusandes.com** · Repo: `klientohq/RusAndes_Blockchain` (public)
@@ -37,14 +37,16 @@ Consequences you must respect:
 ├── .gitignore
 └── RusAndes Raw Website/                ← THIS FOLDER IS THE PUBLISHED SITE ROOT
     ├── index.html          ← Main page (all sections)
+    ├── international-programs.html ← Dedicated Division 1 page
     ├── privacy.html        ← Privacy policy page
     ├── terms.html          ← Terms of use page
     ├── 404.html            ← Custom 404 page
     ├── css/
     │   ├── style.css       ← All styles + design system variables
+    │   ├── international-programs.css ← Division 1 page styles
     │   └── legal.css       ← Styles for privacy.html + terms.html
     ├── js/main.js          ← All JS (particles, scroll, mobile menu, form)
-    ├── assets/             ← ceo-photo.jpg, PHOTO_INSTRUCTIONS.txt
+    ├── assets/             ← ceo-photo.jpg, International Programs hero, image instructions
     ├── logo ideas/         ← Two logo concept PNGs (not final production logo)
     ├── CNAME               ← "rusandes.com" — do NOT delete
     ├── .nojekyll           ← do NOT delete
@@ -119,11 +121,14 @@ Line numbers drift as you edit — search by selector, don't trust the number bl
 
 ### Update phone numbers or email
 Search `index.html` for the number/email and change **both** the `href` and the display text.
-Contact links currently in use: `mailto:RusAndiblockchain@gmail.com`, `wa.me/79961232427`,
-`t.me/+17165443701`.
+Contact links currently in use: `mailto:rusandiblockchain@gmail.com` and
+`wa.me/79961232427`. Do not add another public contact channel without owner approval.
 
 ### Add a service/bullet to a division card
 Find the card by its title (e.g. "Global Markets"), add an `<li>` inside that card's `<ul class="card-list">`.
+
+### Edit Division 1 — International Programs
+Content and official university references live in `international-programs.html`; its page-specific layout lives in `css/international-programs.css`. The Division 1 card and footer on `index.html` link to this page. Destination details use progressive disclosure by country and then city; detailed Kazan content belongs only under `Rusia → Kazán`. Keep university costs tied to a dated official source, never use the public label “experiencia documentada”, never claim a formal partnership, representation, easy admission, or local presence without evidence, and never publish a client testimonial or photograph without explicit permission.
 
 ### Change hero tagline
 Search for `hero-description` — the paragraph under "International Services Group".
@@ -140,10 +145,9 @@ Full policies live in `privacy.html` and `terms.html`.
 ### Add/replace the CEO photo
 Drop `ceo-photo.jpg` into `assets/`. No code change needed. Specs in `assets/PHOTO_INSTRUCTIONS.txt`.
 
-### Update the Formspree form ID
-Search `index.html` for `formspree.io/f/` and replace the ID after the last `/`.
-Current ID: `mvzyjqlg`. To route submissions to a different inbox, create a form under the new
-owner's Formspree account and swap this ID.
+### Contact forms
+Forms prepare a WhatsApp message locally in `js/main.js`; they do not submit to Formspree.
+Keep the email alternative visible and ensure the user reviews the WhatsApp message before sending.
 
 ### Logo concepts
 Concepts live in `logo ideas/`. Move a final, web-optimized logo into `assets/` only once a
@@ -157,9 +161,8 @@ direction is chosen.
 |---|---|
 | CEO | Andres Felipe Parra Peña |
 | HQ | Bogotá D.C., Colombia |
-| Email | RusAndiblockchain@gmail.com |
+| Email | rusandiblockchain@gmail.com |
 | WhatsApp | +7 996 1232427 · https://wa.me/79961232427 |
-| Telegram | +1 716 544 3701 · https://t.me/+17165443701 |
 
 ---
 

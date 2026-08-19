@@ -20,7 +20,7 @@ to "Deploy from a branch" — there is no `index.html` at this root, so the site
 **→ Read [`RusAndes Raw Website/CLAUDE.md`](RusAndes%20Raw%20Website/CLAUDE.md)** for the full
 site-editing guide: section map, design tokens, common edits, preview, and deploy steps.
 
-- `RusAndes Raw Website/HANDOFF.md` — ownership, GitHub access, domain/DNS, Formspree.
+- `RusAndes Raw Website/HANDOFF.md` — ownership, GitHub access, domain/DNS, and contact routing.
 - `RusAndes Raw Website/AGENTS.md` — the same editing guide, for Codex.
 
 ## Non-negotiables

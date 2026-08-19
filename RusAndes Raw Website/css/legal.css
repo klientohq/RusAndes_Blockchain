@@ -11,6 +11,8 @@
 
 .nav-back:hover { color: var(--gold-light); }
 
+.legal-nav-actions { display: flex; align-items: center; gap: 14px; }
+
 .legal-page {
   padding: calc(var(--nav-h) + 60px) 0 80px;
   min-height: 100vh;
@@ -90,8 +92,8 @@
   background: var(--gold);
 }
 
-.legal-section a { color: var(--gold); }
-.legal-section a:hover { color: var(--gold-light); text-decoration: underline; }
+.legal-section a { color: var(--teal-dark); text-decoration: underline; text-underline-offset: 3px; }
+.legal-section a:hover { color: var(--text-0); }
 .legal-section strong { color: var(--text-0); }
 
 .legal-back {
@@ -102,3 +104,8 @@
 }
 
 .legal-footer { padding: 24px 0; }
+
+@media (max-width: 520px) {
+  .legal-nav-actions { gap: 8px; }
+  .nav-back { font-size: 12px; }
+}
