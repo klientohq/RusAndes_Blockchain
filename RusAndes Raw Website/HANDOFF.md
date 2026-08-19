@@ -8,7 +8,7 @@
 
 ## 1. What this is
 
-- **Site:** RusAndes Blockchain — a static, single-page marketing website.
+- **Site:** RusAndes Blockchain — a static, multi-page marketing website.
 - **Stack:** Plain HTML + CSS + JavaScript. **No build tools, no frameworks.** You edit files directly and push.
 - **Hosting:** GitHub Pages (free static hosting served straight from this repo's `main` branch).
 - **Live URLs:**
@@ -16,7 +16,7 @@
   - GitHub Pages fallback: `https://klientohq.github.io/RusAndes_Blockchain/`
 - **Repo:** `https://github.com/klientohq/RusAndes_Blockchain`
 
-The site has these sections (all in `index.html`): Home/Hero, Stats bar, Four Divisions, International Mobility model, About/CEO, Values, Contact, Footer + legal disclaimer. Plus standalone `privacy.html`, `terms.html`, and `404.html`.
+The main page has Home/Hero, Stats bar, Four Divisions, International Mobility model, About/CEO, Values, Contact, Footer + legal disclaimer. Division 1 also has a standalone `international-programs.html` page, alongside `privacy.html`, `terms.html`, and `404.html`.
 
 ---
 
@@ -32,10 +32,12 @@ The site has these sections (all in `index.html`): Home/Hero, Stats bar, Four Di
 ├── .gitignore
 └── RusAndes Raw Website/               ← THIS FOLDER IS THE PUBLISHED SITE ROOT
     ├── index.html          ← the whole main page, all sections
+    ├── international-programs.html ← Division 1: routes, universities, costs, process, FAQ, qualification form
     ├── privacy.html        ← privacy policy
     ├── terms.html          ← terms of use
     ├── 404.html            ← custom not-found page
     ├── css/style.css       ← all styles + design-system color/font variables (top of file)
+    ├── css/international-programs.css ← dedicated Division 1 styles
     ├── css/legal.css       ← styles for privacy.html + terms.html
     ├── js/main.js          ← all JS (particles, scroll, mobile menu, contact form)
     ├── assets/             ← ceo-photo.jpg and image assets
@@ -163,9 +165,9 @@ This scopes your access to **only this repo** — you can't see or touch any oth
 
 ---
 
-## 8. The contact form (Formspree)
+## 8. Contact forms
 
-The contact form submits to **Formspree**. The form ID is in `index.html` — search for `formspree.io/f/`. To route form submissions to a different inbox, create a Formspree form under the new owner's account and replace the ID after the last `/`.
+The forms prepare a WhatsApp message in the visitor's browser and open the company channel at `wa.me/79961232427`. Nothing is sent until the visitor confirms it in WhatsApp. Every form also offers `rusandiblockchain@gmail.com` as a direct email alternative. Formspree and Telegram are not public contact channels.
 
 ---
 
@@ -175,9 +177,8 @@ The contact form submits to **Formspree**. The form ID is in `index.html` — se
 |---|---|
 | CEO | Andres Felipe Parra Peña |
 | HQ | Bogotá D.C., Colombia |
-| Email (site) | RusAndiblockchain@gmail.com |
+| Email (site) | rusandiblockchain@gmail.com |
 | WhatsApp | +7 996 1232427 · https://wa.me/79961232427 |
-| Telegram | +1 716 544 3701 · https://t.me/+17165443701 |
 
 ---
 
