@@ -13,7 +13,7 @@ Live: **https://rusandes.com** · Repo: `klientohq/RusAndes_Blockchain` (public)
 
 Branch-based GitHub Pages can only publish `/` or `/docs` — it cannot publish an arbitrary
 subfolder. So this repo publishes through a **GitHub Actions workflow**
-(`.github/workflows/deploy-pages.yml`) that uploads `RusAndes Raw Website/` as the site root.
+(`.github/workflows/deploy-pages.yml`) that builds an explicit public-file allowlist from `RusAndes Raw Website/` and uploads it as the site root.
 
 Consequences you must respect:
 
@@ -38,12 +38,14 @@ Consequences you must respect:
 └── RusAndes Raw Website/                ← THIS FOLDER IS THE PUBLISHED SITE ROOT
     ├── index.html          ← Main page (all sections)
     ├── international-programs.html ← Dedicated Division 1 page
+    ├── global-markets.html  ← Dedicated Division 2 page
     ├── privacy.html        ← Privacy policy page
     ├── terms.html          ← Terms of use page
     ├── 404.html            ← Custom 404 page
     ├── css/
     │   ├── style.css       ← All styles + design system variables
     │   ├── international-programs.css ← Division 1 page styles
+    │   ├── global-markets.css ← Division 2 page styles
     │   └── legal.css       ← Styles for privacy.html + terms.html
     ├── js/main.js          ← All JS (particles, scroll, mobile menu, form)
     ├── assets/             ← ceo-photo.jpg, International Programs hero, image instructions
@@ -130,6 +132,9 @@ Find the card by its title (e.g. "Global Markets"), add an `<li>` inside that ca
 ### Edit Division 1 — International Programs
 Content and official university references live in `international-programs.html`; its page-specific layout lives in `css/international-programs.css`. The Division 1 card and footer on `index.html` link to this page. Destination details use progressive disclosure by country and then city; detailed Kazan content belongs only under `Rusia → Kazán`. Keep university costs tied to a dated official source, never use the public label “experiencia documentada”, never claim a formal partnership, representation, easy admission, or local presence without evidence, and never publish a client testimonial or photograph without explicit permission.
 
+### Edit Division 2 — Global Markets
+The bilingual portfolio-education pages are `global-markets.html` and `en/global-markets.html`; their shared page styles are in `css/global-markets.css`. Keep the public offer educational and general: explain goals, horizon, liquidity, risk, diversification, asset-class roles, and review rules. Never publish personalized allocations, specific buy/sell/hold recommendations, return promises, custody, execution, fund management, or claims that RusAndes is licensed or regulated without documentary proof. Keep the Colombian regulatory notice in the page and terms, collect no account credentials or exact balances, and route inquiries only to the approved company WhatsApp or email.
+
 ### Change hero tagline
 Search for `hero-description` — the paragraph under "International Services Group".
 
@@ -193,7 +198,7 @@ git commit -m "describe what changed"
 git push origin main       # ← this publishes it live
 ```
 
-The Actions workflow builds and deploys in roughly 15–60 seconds.
+The Actions workflow copies an explicit allowlist into `public-site/`, then builds and deploys it in roughly 15–60 seconds. Add every new public page or asset to that allowlist in the same change.
 
 Verify after deploying:
 

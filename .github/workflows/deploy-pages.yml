@@ -38,18 +38,22 @@ jobs:
           cp "RusAndes Raw Website/404.html" public-site/404.html
           cp "RusAndes Raw Website/index.html" public-site/index.html
           cp "RusAndes Raw Website/international-programs.html" public-site/international-programs.html
+          cp "RusAndes Raw Website/global-markets.html" public-site/global-markets.html
           cp "RusAndes Raw Website/privacy.html" public-site/privacy.html
           cp "RusAndes Raw Website/terms.html" public-site/terms.html
           cp "RusAndes Raw Website/robots.txt" public-site/robots.txt
           cp "RusAndes Raw Website/sitemap.xml" public-site/sitemap.xml
           cp "RusAndes Raw Website/assets/ceo-photo.jpg" public-site/assets/ceo-photo.jpg
           cp "RusAndes Raw Website/assets/international-programs-hero.jpg" public-site/assets/international-programs-hero.jpg
+          cp "RusAndes Raw Website/assets/global-markets-social.png" public-site/assets/global-markets-social.png
           cp "RusAndes Raw Website/css/style.css" public-site/css/style.css
           cp "RusAndes Raw Website/css/legal.css" public-site/css/legal.css
           cp "RusAndes Raw Website/css/international-programs.css" public-site/css/international-programs.css
+          cp "RusAndes Raw Website/css/global-markets.css" public-site/css/global-markets.css
           cp "RusAndes Raw Website/js/main.js" public-site/js/main.js
           cp "RusAndes Raw Website/en/index.html" public-site/en/index.html
           cp "RusAndes Raw Website/en/international-programs.html" public-site/en/international-programs.html
+          cp "RusAndes Raw Website/en/global-markets.html" public-site/en/global-markets.html
           cp "RusAndes Raw Website/en/privacy.html" public-site/en/privacy.html
           cp "RusAndes Raw Website/en/terms.html" public-site/en/terms.html
 

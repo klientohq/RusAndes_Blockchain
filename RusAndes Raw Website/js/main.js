@@ -324,18 +324,22 @@
       heading: 'Hola, quiero información de RusAndes.',
       name: 'Nombre', email: 'Correo', service: 'Servicio', level: 'Nivel académico',
       residence: 'País de residencia', nationality: 'Nacionalidad', destination: 'Destino',
-      program: 'Programa', message: 'Mensaje', source: 'Página'
+      program: 'Programa', experience: 'Experiencia', goal: 'Objetivo educativo',
+      horizon: 'Horizonte', marketInterest: 'Mercados de interés', message: 'Mensaje', source: 'Página'
     } : {
       heading: 'Hello, I would like information from RusAndes.',
       name: 'Name', email: 'Email', service: 'Service', level: 'Academic level',
       residence: 'Country of residence', nationality: 'Nationality', destination: 'Destination',
-      program: 'Program', message: 'Message', source: 'Page'
+      program: 'Program', experience: 'Experience', goal: 'Educational goal',
+      horizon: 'Time horizon', marketInterest: 'Markets of interest', message: 'Message', source: 'Page'
     };
     const fields = [
       ['name', labels.name], ['email', labels.email], ['service', labels.service],
       ['academic_level', labels.level], ['residence', labels.residence],
       ['nationality', labels.nationality], ['destination', labels.destination],
-      ['program', labels.program], ['message', labels.message], ['source_page', labels.source]
+      ['program', labels.program], ['experience', labels.experience], ['goal', labels.goal],
+      ['horizon', labels.horizon], ['market_interest', labels.marketInterest],
+      ['message', labels.message], ['source_page', labels.source]
     ];
     const lines = [labels.heading];
     fields.forEach(([key, label]) => {

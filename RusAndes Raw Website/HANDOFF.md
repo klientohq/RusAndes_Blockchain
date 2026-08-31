@@ -16,7 +16,7 @@
   - GitHub Pages fallback: `https://klientohq.github.io/RusAndes_Blockchain/`
 - **Repo:** `https://github.com/klientohq/RusAndes_Blockchain`
 
-The main page has Home/Hero, Stats bar, Four Divisions, International Mobility model, About/CEO, Values, Contact, Footer + legal disclaimer. Division 1 also has a standalone `international-programs.html` page, alongside `privacy.html`, `terms.html`, and `404.html`.
+The main page has Home/Hero, Stats bar, Four Divisions, International Mobility model, About/CEO, Values, Contact, Footer + legal disclaimer. Division 1 has a standalone `international-programs.html` page and Division 2 has `global-markets.html`, each with an English counterpart under `en/`, alongside bilingual legal pages and `404.html`.
 
 ---
 
@@ -33,11 +33,13 @@ The main page has Home/Hero, Stats bar, Four Divisions, International Mobility m
 └── RusAndes Raw Website/               ← THIS FOLDER IS THE PUBLISHED SITE ROOT
     ├── index.html          ← the whole main page, all sections
     ├── international-programs.html ← Division 1: routes, universities, costs, process, FAQ, qualification form
+    ├── global-markets.html  ← Division 2: portfolio education, method, asset classes, limits, FAQ, inquiry form
     ├── privacy.html        ← privacy policy
     ├── terms.html          ← terms of use
     ├── 404.html            ← custom not-found page
     ├── css/style.css       ← all styles + design-system color/font variables (top of file)
     ├── css/international-programs.css ← dedicated Division 1 styles
+    ├── css/global-markets.css ← dedicated Division 2 styles
     ├── css/legal.css       ← styles for privacy.html + terms.html
     ├── js/main.js          ← all JS (particles, scroll, mobile menu, contact form)
     ├── assets/             ← ceo-photo.jpg and image assets

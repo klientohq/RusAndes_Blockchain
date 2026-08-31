@@ -4,7 +4,7 @@
     <loc>https://rusandes.com/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://rusandes.com/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://rusandes.com/en/" />
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,7 +12,7 @@
     <loc>https://rusandes.com/en/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://rusandes.com/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://rusandes.com/en/" />
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -33,10 +33,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://rusandes.com/global-markets.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://rusandes.com/global-markets.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rusandes.com/en/global-markets.html" />
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://rusandes.com/en/global-markets.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://rusandes.com/global-markets.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rusandes.com/en/global-markets.html" />
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://rusandes.com/privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://rusandes.com/privacy.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://rusandes.com/en/privacy.html" />
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -44,7 +60,7 @@
     <loc>https://rusandes.com/en/privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://rusandes.com/privacy.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://rusandes.com/en/privacy.html" />
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -52,7 +68,7 @@
     <loc>https://rusandes.com/terms.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://rusandes.com/terms.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://rusandes.com/en/terms.html" />
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -60,7 +76,7 @@
     <loc>https://rusandes.com/en/terms.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://rusandes.com/terms.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://rusandes.com/en/terms.html" />
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">RusAndes Global Markets</title>
+  <desc id="desc">Social preview for the portfolio decision-framework education division.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050B1F"/>
+      <stop offset="0.68" stop-color="#0A1730"/>
+      <stop offset="1" stop-color="#0D3440"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#26B7C8" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#26B7C8" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#FFFFFF" stroke-opacity="0.06"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <ellipse cx="930" cy="322" rx="330" ry="330" fill="url(#glow)"/>
+
+  <g transform="translate(84 76)">
+    <rect width="54" height="54" rx="14" fill="#08142A" stroke="#D7B85F" stroke-opacity="0.42"/>
+    <path d="M13 39L24 13L30 31L42 17" fill="none" stroke="#F0CF72" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="42" cy="17" r="4.5" fill="#26B7C8"/>
+    <text x="74" y="22" fill="#F0F4FF" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="3">RUSANDES</text>
+    <text x="74" y="48" fill="#8B95B0" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600" letter-spacing="2.2">DIVISION 02</text>
+  </g>
+
+  <g transform="translate(84 252)">
+    <text fill="#F0CF72" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="4">EDUCATION · METHOD · DECISIONS</text>
+    <text y="76" fill="#FFFFFF" font-family="Georgia, serif" font-size="70" font-weight="400">Global Markets</text>
+    <path d="M0 110H418" stroke="#D7B85F" stroke-width="2"/>
+    <text y="152" fill="#CDD5E4" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="400">Portfolio decision framework</text>
+  </g>
+
+  <g transform="translate(700 123)">
+    <rect width="400" height="384" rx="30" fill="#071225" fill-opacity="0.86" stroke="#FFFFFF" stroke-opacity="0.12"/>
+    <circle cx="200" cy="192" r="134" fill="none" stroke="#26B7C8" stroke-opacity="0.45" stroke-width="2"/>
+    <circle cx="200" cy="192" r="86" fill="#0A1730" stroke="#D7B85F" stroke-opacity="0.58" stroke-width="2"/>
+    <path d="M200 58V326M66 192H334M105 97L295 287M295 97L105 287" stroke="#FFFFFF" stroke-opacity="0.08"/>
+    <g fill="#F0F4FF" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle">
+      <circle cx="200" cy="58" r="25" fill="#102A3E" stroke="#26B7C8"/><text x="200" y="63">G</text>
+      <circle cx="334" cy="192" r="25" fill="#102A3E" stroke="#26B7C8"/><text x="334" y="197">H</text>
+      <circle cx="200" cy="326" r="25" fill="#2A2515" stroke="#D7B85F"/><text x="200" y="331">R</text>
+      <circle cx="66" cy="192" r="25" fill="#2A2515" stroke="#D7B85F"/><text x="66" y="197">L</text>
+    </g>
+    <text x="200" y="187" fill="#FFFFFF" font-family="Georgia, serif" font-size="25" text-anchor="middle">CRITERIA</text>
+    <text x="200" y="213" fill="#8B95B0" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="2" text-anchor="middle">BEFORE ASSETS</text>
+  </g>
+
+  <text x="84" y="580" fill="#8B95B0" font-family="Inter, Arial, sans-serif" font-size="14" letter-spacing="1.5">RUSANDES.COM</text>
+</svg>
