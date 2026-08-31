@@ -46,6 +46,7 @@ jobs:
           cp "RusAndes Raw Website/assets/ceo-photo.jpg" public-site/assets/ceo-photo.jpg
           cp "RusAndes Raw Website/assets/international-programs-hero.jpg" public-site/assets/international-programs-hero.jpg
           cp "RusAndes Raw Website/assets/global-markets-social.png" public-site/assets/global-markets-social.png
+          cp "RusAndes Raw Website/assets/global-markets-hero.webp" public-site/assets/global-markets-hero.webp
           cp "RusAndes Raw Website/css/style.css" public-site/css/style.css
           cp "RusAndes Raw Website/css/legal.css" public-site/css/legal.css
           cp "RusAndes Raw Website/css/international-programs.css" public-site/css/international-programs.css
