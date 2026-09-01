@@ -4,7 +4,7 @@
     <loc>https://rusandes.com/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://rusandes.com/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://rusandes.com/en/" />
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,7 +12,7 @@
     <loc>https://rusandes.com/en/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://rusandes.com/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://rusandes.com/en/" />
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -45,6 +45,22 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://rusandes.com/global-markets.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://rusandes.com/en/global-markets.html" />
     <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rusandes.com/accommodation-services.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://rusandes.com/accommodation-services.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rusandes.com/en/accommodation-services.html" />
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://rusandes.com/en/accommodation-services.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://rusandes.com/accommodation-services.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rusandes.com/en/accommodation-services.html" />
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

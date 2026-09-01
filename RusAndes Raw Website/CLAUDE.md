@@ -39,6 +39,7 @@ Consequences you must respect:
     ├── index.html          ← Main page (all sections)
     ├── international-programs.html ← Dedicated Division 1 page
     ├── global-markets.html  ← Dedicated Division 2 page
+    ├── accommodation-services.html ← Dedicated Division 3 Bogotá model page
     ├── privacy.html        ← Privacy policy page
     ├── terms.html          ← Terms of use page
     ├── 404.html            ← Custom 404 page
@@ -46,6 +47,7 @@ Consequences you must respect:
     │   ├── style.css       ← All styles + design system variables
     │   ├── international-programs.css ← Division 1 page styles
     │   ├── global-markets.css ← Division 2 page styles
+    │   ├── accommodation-services.css ← Division 3 page styles
     │   └── legal.css       ← Styles for privacy.html + terms.html
     ├── js/main.js          ← All JS (particles, scroll, mobile menu, form)
     ├── assets/             ← ceo-photo.jpg, International Programs hero, image instructions
@@ -134,6 +136,9 @@ Content and official university references live in `international-programs.html`
 
 ### Edit Division 2 — Global Markets
 The bilingual portfolio-education pages are `global-markets.html` and `en/global-markets.html`; their shared page styles are in `css/global-markets.css`. Keep the public offer educational and general: explain goals, horizon, liquidity, risk, diversification, asset-class roles, and review rules. Never publish personalized allocations, specific buy/sell/hold recommendations, return promises, custody, execution, fund management, or claims that RusAndes is licensed or regulated without documentary proof. Keep the Colombian regulatory notice in the page and terms, collect no account credentials or exact balances, and route inquiries only to the approved company WhatsApp or email.
+
+### Edit Division 3 — Accommodation Services
+The bilingual Bogotá model pages are `accommodation-services.html` and `en/accommodation-services.html`; their shared page styles are in `css/accommodation-services.css`. Keep the page concise: a basic division description, Bogotá location, and the approved model-space gallery. Do not add unverified availability, pricing, booking, or testimonial claims.
 
 ### Change hero tagline
 Search for `hero-description` — the paragraph under "International Services Group".
