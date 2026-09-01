@@ -65,6 +65,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://rusandes.com/digital-systems.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://rusandes.com/digital-systems.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rusandes.com/en/digital-systems.html" />
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://rusandes.com/en/digital-systems.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://rusandes.com/digital-systems.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://rusandes.com/en/digital-systems.html" />
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://rusandes.com/privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://rusandes.com/privacy.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://rusandes.com/en/privacy.html" />

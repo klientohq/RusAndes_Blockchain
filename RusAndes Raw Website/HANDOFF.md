@@ -16,7 +16,7 @@
   - GitHub Pages fallback: `https://klientohq.github.io/RusAndes_Blockchain/`
 - **Repo:** `https://github.com/klientohq/RusAndes_Blockchain`
 
-The main page has Home/Hero, Stats bar, Four Divisions, International Mobility model, About/CEO, Values, Contact, Footer + legal disclaimer. Divisions 1, 2, and 3 have standalone bilingual pages: `international-programs.html`, `global-markets.html`, and `accommodation-services.html`, with English counterparts under `en/`.
+The main page has Home/Hero, Stats bar, Four Divisions, International Mobility model, About/CEO, Values, Contact, Footer + legal disclaimer. All four divisions have standalone bilingual pages: `international-programs.html`, `global-markets.html`, `accommodation-services.html`, and `digital-systems.html`, with English counterparts under `en/`.
 
 ---
 
@@ -35,6 +35,7 @@ The main page has Home/Hero, Stats bar, Four Divisions, International Mobility m
     ├── international-programs.html ← Division 1: routes, universities, costs, process, FAQ, qualification form
     ├── global-markets.html  ← Division 2: portfolio education, method, asset classes, limits, FAQ, inquiry form
     ├── accommodation-services.html ← Division 3: Bogotá accommodation model and approved space gallery
+    ├── digital-systems.html ← Division 4: measurable websites, lead capture, and controlled automation
     ├── privacy.html        ← privacy policy
     ├── terms.html          ← terms of use
     ├── 404.html            ← custom not-found page
@@ -42,6 +43,7 @@ The main page has Home/Hero, Stats bar, Four Divisions, International Mobility m
     ├── css/international-programs.css ← dedicated Division 1 styles
     ├── css/global-markets.css ← dedicated Division 2 styles
     ├── css/accommodation-services.css ← dedicated Division 3 styles
+    ├── css/digital-systems.css ← dedicated Division 4 styles
     ├── css/legal.css       ← styles for privacy.html + terms.html
     ├── js/main.js          ← all JS (particles, scroll, mobile menu, contact form)
     ├── assets/             ← ceo-photo.jpg and image assets

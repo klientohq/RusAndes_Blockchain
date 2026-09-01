@@ -40,6 +40,7 @@ Consequences you must respect:
     ├── international-programs.html ← Dedicated Division 1 page
     ├── global-markets.html  ← Dedicated Division 2 page
     ├── accommodation-services.html ← Dedicated Division 3 Bogotá model page
+    ├── digital-systems.html ← Dedicated Division 4 page
     ├── privacy.html        ← Privacy policy page
     ├── terms.html          ← Terms of use page
     ├── 404.html            ← Custom 404 page
@@ -48,6 +49,7 @@ Consequences you must respect:
     │   ├── international-programs.css ← Division 1 page styles
     │   ├── global-markets.css ← Division 2 page styles
     │   ├── accommodation-services.css ← Division 3 page styles
+    │   ├── digital-systems.css ← Division 4 page styles
     │   └── legal.css       ← Styles for privacy.html + terms.html
     ├── js/main.js          ← All JS (particles, scroll, mobile menu, form)
     ├── assets/             ← ceo-photo.jpg, International Programs hero, image instructions
@@ -139,6 +141,9 @@ The bilingual portfolio-education pages are `global-markets.html` and `en/global
 
 ### Edit Division 3 — Accommodation Services
 The bilingual Bogotá model pages are `accommodation-services.html` and `en/accommodation-services.html`; their shared page styles are in `css/accommodation-services.css`. Keep the page concise: a basic division description, Bogotá location, and the approved model-space gallery. Do not add unverified availability, pricing, booking, or testimonial claims.
+
+### Edit Division 4 — Digital Systems
+The bilingual Digital Systems pages are `digital-systems.html` and `en/digital-systems.html`; their shared page styles are in `css/digital-systems.css`. Keep the initial offer fixed-scope and focused on measurable websites, lead capture, one controlled automation, and documented client ownership. Do not publish guaranteed rankings, traffic, leads, sales, revenue, unverified integrations, client results, or testimonials.
 
 ### Change hero tagline
 Search for `hero-description` — the paragraph under "International Services Group".

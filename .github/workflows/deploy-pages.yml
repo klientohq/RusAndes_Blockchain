@@ -40,6 +40,7 @@ jobs:
           cp "RusAndes Raw Website/international-programs.html" public-site/international-programs.html
           cp "RusAndes Raw Website/global-markets.html" public-site/global-markets.html
           cp "RusAndes Raw Website/accommodation-services.html" public-site/accommodation-services.html
+          cp "RusAndes Raw Website/digital-systems.html" public-site/digital-systems.html
           cp "RusAndes Raw Website/privacy.html" public-site/privacy.html
           cp "RusAndes Raw Website/terms.html" public-site/terms.html
           cp "RusAndes Raw Website/robots.txt" public-site/robots.txt
@@ -50,16 +51,20 @@ jobs:
           cp "RusAndes Raw Website/assets/global-markets-hero.webp" public-site/assets/global-markets-hero.webp
           cp "RusAndes Raw Website/assets/accommodation-social.webp" public-site/assets/accommodation-social.webp
           cp "RusAndes Raw Website/assets"/bogota-model-*.webp public-site/assets/
+          cp "RusAndes Raw Website/assets/digital-systems-hero.webp" public-site/assets/digital-systems-hero.webp
+          cp "RusAndes Raw Website/assets/digital-systems-social.webp" public-site/assets/digital-systems-social.webp
           cp "RusAndes Raw Website/css/style.css" public-site/css/style.css
           cp "RusAndes Raw Website/css/legal.css" public-site/css/legal.css
           cp "RusAndes Raw Website/css/international-programs.css" public-site/css/international-programs.css
           cp "RusAndes Raw Website/css/global-markets.css" public-site/css/global-markets.css
           cp "RusAndes Raw Website/css/accommodation-services.css" public-site/css/accommodation-services.css
+          cp "RusAndes Raw Website/css/digital-systems.css" public-site/css/digital-systems.css
           cp "RusAndes Raw Website/js/main.js" public-site/js/main.js
           cp "RusAndes Raw Website/en/index.html" public-site/en/index.html
           cp "RusAndes Raw Website/en/international-programs.html" public-site/en/international-programs.html
           cp "RusAndes Raw Website/en/global-markets.html" public-site/en/global-markets.html
           cp "RusAndes Raw Website/en/accommodation-services.html" public-site/en/accommodation-services.html
+          cp "RusAndes Raw Website/en/digital-systems.html" public-site/en/digital-systems.html
           cp "RusAndes Raw Website/en/privacy.html" public-site/en/privacy.html
           cp "RusAndes Raw Website/en/terms.html" public-site/en/terms.html
 
